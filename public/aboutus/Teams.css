@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    padding: 1%;
+    border:2px solid red;
+    justify-content: center;
+}
+
+.photo-grid{
+    border:2px solid red;
+    display: block;
+    width: 95%;
+    flex-direction: column;
+}
+
+.row {
+    border:2px solid blue;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+img {
+    height: 400px;
+    width: auto;
+}
