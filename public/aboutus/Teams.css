@@ -1,5 +1,6 @@
 body {
     background: #131418;
+    padding: 10px;
 }
   
 * {
@@ -7,20 +8,36 @@ body {
     padding: 0;
     max-width: 100%;
 }
+
+h1 { 
+    color: white;
+    margin-left: 30px;
+    margin-top: 30px;
+    font-size: 40px;
+}
   
 .grid {
     text-align: center;
     max-width: 95vw;
-    margin: 2.5vw auto;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    gap: 13px;
+    height: max(100%,100vh);
 }
-  
-.grid-item {
-    padding: 8px;
-    box-sizing: border-box;
-    display:inline;
+
+.grid-items{
+    width:100%;
+}
+
+.cols {
+    display: flex; 
+    flex-direction: column;
+    gap: 10px;
 }
 
 img {
+    width: 100%;
     border-radius: 25px;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
@@ -28,26 +45,13 @@ img {
     -o-border-radius: 25px;
 }
 
-@media (min-width: 500px) {
-    .grid-item {
-      width: 50%;
+@media only screen and (max-width: 600px){
+    .grid {
+        flex-direction: column;
+        padding:40px;
+        gap: 20px;
     }
-}
-  
-@media (min-width: 1000px) {
-    .grid-item {
-      width: 33.333%;
-    }
-}
-  
-@media (min-width: 1700px) {
-    .grid-item {
-      width: 25%;
-    }
-}
-  
-@media (min-width: 2100px) {
-    .grid-item {
-      width: 20%;
+    .cols {
+        gap: 20px;
     }
 }

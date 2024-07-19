@@ -7,12 +7,10 @@
     <link rel="stylesheet" href="Teams.css">
 </head>
 <body>
-<!-- Made possible by the great work of David DeSandro @ https://masonry.desandro.com -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-
+<div><h1>Meet The Team</h1></div>
 <div class="grid">
+</div>
+
   <div class="grid-item">
     <img src="./images/img1.png"/>
   </div>
@@ -46,16 +44,15 @@
   <div class="grid-item">
     <img src="./images/img12.png"/>
   </div>
-</div>
 
-<!-- Part 3: the script call -->
-
+  <script src="Teams.js"></script>
+</body>
 <!-- Now that everything is loaded we create a script to trigger masonary on $grid. Note that this simply says: "if the images are fully loaded, trigger masnory on $grid. -->
-<script>
+<!-- <script>
 $(".grid").imagesLoaded(function() {
     $(".grid").masonry({
       itemSelector: ".grid-item"
     });
   });
-</script>
+</script> -->
 </html>
