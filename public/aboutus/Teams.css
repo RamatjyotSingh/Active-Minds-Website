@@ -37,6 +37,8 @@ h1 {
 }
 
 img {
+    position: relative ;
+    z-index:10;
     width: 100%;
     border-radius: 25px;
     -webkit-border-radius: 25px;
@@ -54,4 +56,68 @@ img {
     .cols {
         gap: 20px;
     }
+}
+
+.grid-item:hover{
+   z-index: 100;
+
+    transform: scale(1.1);
+    
+}
+.grid-item{
+    transition:transform .5s ease;
+
+}
+
+
+
+
+
+
+/* Initial state of the description and title */
+/* Initial state of the description and title */
+.grid-item .description, .grid-item h1 {
+    position: relative;
+    width: 80%;
+    z-index: 0;
+    color:#131418;
+    font-size: 20px;
+    text-align: left;
+    opacity: 0; /* Start hidden */
+    max-height: 0; /* Prevent from occupying space */
+    overflow: hidden; /* Ensure content does not overflow */
+    transition: opacity 0.8s ease, max-height 0.8s ease; /* Smooth transition for opacity and max-height */
+}
+
+/* State of description and title on hover of the grid item */
+.grid-item:hover .description, .grid-item:hover h1 {
+    opacity: 1; /* Fully visible on hover */
+    max-height: 500px; /* Adjust as needed to fit content */
+    /* No need to change visibility here */
+}
+.card-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #131418;
+    border-radius: 25px;
+    padding: 5px 20px;
+    transition: 0.3s;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    transition: background-color 1s ease;
+}
+.card-container:hover{
+    background-color: antiquewhite;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+}
+
+
+.grid-item h1 {
+    font-size: 35px;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
