@@ -65,7 +65,7 @@ img {
     
 }
 .grid-item{
-    transition:transform .5s ease;
+    transition:transform 1s ease;
 
 }
 
@@ -86,7 +86,7 @@ img {
     opacity: 0; /* Start hidden */
     max-height: 0; /* Prevent from occupying space */
     overflow: hidden; /* Ensure content does not overflow */
-    transition: opacity 0.8s ease, max-height 0.8s ease; /* Smooth transition for opacity and max-height */
+    transition: opacity 1s ease, max-height 1s ease; /* Smooth transition for opacity and max-height */
 }
 
 /* State of description and title on hover of the grid item */
