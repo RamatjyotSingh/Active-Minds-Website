@@ -57,15 +57,21 @@ img {
         gap: 20px;
     }
 }
+.grid:hover .grid-item {
 
-.grid-item:hover{
+    filter: blur(2px);
+    
+}
+.grid .grid-item:hover{
+
+    filter: blur(0px);
    z-index: 100;
-
+   
     transform: scale(1.1);
     
 }
 .grid-item{
-    transition:transform 1s ease;
+    transition:transform 0.5s ease;
 
 }
 
@@ -121,3 +127,5 @@ img {
     margin-top: 0;
     margin-bottom: 10px;
 }
+/* Apply a blur to all grid items when any grid item is hovered */
+
