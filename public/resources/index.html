@@ -7,10 +7,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="resources.css">
+    <link rel="stylesheet" href="./hamburger/hamburger.css">
     <title>Resources</title>
 </head>
 
 <body>
+    <div id="menu">
+        <div id="menu-bar" onclick="menuOnClick()">
+          <div id="bar1" class="bar"></div>
+          <div id="bar2" class="bar"></div>
+          <div id="bar3" class="bar"></div>
+        </div>
+        <nav class="nav" id="nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="../aboutus/Teams.html">Team</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav> 
+    </div>
+    <div class="menu-bg" id="menu-bg"></div> 
+    <script src="./hamburger/hamburger.js"></script>
     <div class="content">
         <!-- <div class="bg-svg">
             <img src="./assets/bg/chat.png" class="highlight-0">
@@ -31,12 +49,12 @@
                     Counselling & Therapy Resources
                 </span>
                 <div class="description-text">
-                    Please keep in mind that these phone lines and resources are not for in the time of crisis.
-                    If you or someone close to you is in a crisis, call:
-                    Klinic Crisis Line 204-786-8686
-                    Crisis Response Centre 204-940-1781
-                    Sexual Assault Crisis Line 1-888-292-7565
-                    Mobile Crisis Service 204-940-1781
+                    Please keep in mind that these phone lines and resources are not for in the time of crisis.<br>
+                    If you or someone close to you is in a crisis, call:<br>
+                    Klinic Crisis Line: 204-786-8686<br>
+                    Crisis Response Centre: 204-940-1781<br>
+                    Sexual Assault Crisis Line: 1-888-292-7565<br>
+                    Mobile Crisis Service: 204-940-1781
                 </div>
             </div>
         </div>
@@ -47,7 +65,7 @@
                 <img src="./assets/right arrow.svg" alt="right arrow" class="arrow-animation">
                 <span class="title-text">Student Counselling centre</span>
                 <div class="description-text">
-                    -   Phone: (204) 474-8592
+                    -   Phone: (204) 474-8592<br>
                     -   Personal counselling and group/workshops
                 </div>
             </div>
@@ -56,8 +74,8 @@
                 <img src="./assets/right arrow.svg" alt="right arrow" class="arrow-animation">
                 <span class="title-text">Empower Me</span>
                 <div class="description-text">
-                    -   Phone: 1-833-628-5589 (Toll Free)
-                    -   Counselling available to University of Manitoba students
+                    -   Phone: 1-833-628-5589 (Toll Free)<br>
+                    -   Counselling available to University of Manitoba students<br>
                     In the Community
                 </div>
             </div>
@@ -66,7 +84,7 @@
                 <img src="./assets/right arrow.svg" alt="right arrow" class="arrow-animation">
                 <span class="title-text">Mental Health Virtual Therapy</span>
                 <div class="description-text">
-                    -   Phone:  1 (844) 218-2955
+                    -   Phone:  1 (844) 218-2955<br>
                     -   Two free therapy sessions offered through the Manitoba Government
                 </div>
             </div>
@@ -76,7 +94,7 @@
                 <span class="title-text">AbilitiCBT Program</span>
             
                 <div class="description-text">
-                    -   A free digital therapy program
+                    -   A free digital therapy program<br>
                     -   Available to MB residents 16+ experiencing mild-moderate anxiety due to struggles of COVID-19
                 </div>
             </div>
@@ -84,25 +102,25 @@
             <div class="resources">
                 <img src="./assets/right arrow.svg" alt="right arrow" class="arrow-animation">
                 <span class="title-text">Women's Health Clinic</span>
-                <div class="description-text">-   Phone: (204) 947-1517</div>
+                <div class="description-text">- Phone: (204) 947-1517</div>
             </div>
             
             <div class="resources">
                 <img src="./assets/right arrow.svg" alt="right arrow" class="arrow-animation">
                 <span class="title-text">Men's Resource Centre</span>
-                <div class="description-text">-   Phone: (204) 415-6796 (Ext: 250)</div>
+                <div class="description-text">- Phone: (204) 415-6796 (Ext: 250)</div>
             </div>
 
             <div class="resources">
                 <img src="./assets/right arrow.svg" alt="right arrow" class="arrow-animation">
                 <span class="title-text">Immigrant Women's Counselling</span>
-                <div class="description-text">-   Phone: (204) 940-5900</div>
+                <div class="description-text">- Phone: (204) 940-5900</div>
             </div>
 
             <div class="resources">
                 <img src="./assets/right arrow.svg" alt="right arrow" class="arrow-animation">
                 <span class="title-text">Rainbow Resource Centre</span>
-                <div class="description-text">-   Phone: (204) 474-0212</div>
+                <div class="description-text">- Phone: (204) 474-0212</div>
             </div>
 
         </div>
@@ -112,22 +130,22 @@
             <div class="resources">
                 <img src="./assets/right arrow.svg" alt="right arrow" class="arrow-animation">
                 <span class="title-text">Talk Space</span>
-                <div class="description-text">https://www.talkspace.com</div>
+                <div class="description-text"><a href="https://www.talkspace.com">https://www.talkspace.com</a></div>
             </div>
 
             <div class="resources">
                 <img src="./assets/right arrow.svg" alt="right arrow" class="arrow-animation">
                 <span class="title-text">Better Help</span>
             
-                <div class="description-text">https://www.betterhelp.com/</div>
+                <div class="description-text"><a href="https://www.betterhelp.com/">https://www.betterhelp.com/</a></div>
             </div>
 
             <div class="resources">
                 <img src="./assets/right arrow.svg" alt="right arrow" class="arrow-animation">
                 <span class="title-text">Canadian Psychological Association</span>
                 <div class="description-text">
-                -   Find a psychologist that will help you
-                -   https://cpa.ca/public/findingapsychologist/
+                -   Find a psychologist that will help you<br>
+                -   <a href="https://cpa.ca/public/findingapsychologist/">https://cpa.ca/public/findingapsychologist/</a>
                 </div>
             </div>
 
