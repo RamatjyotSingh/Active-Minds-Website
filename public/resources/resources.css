@@ -9,18 +9,22 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    color: #e3eef4;
+    background-color: #003550;
     /* line-height: 50px; */
 }
 
 body {
     position: relative;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    /* justify-content: center; */
     align-items: center;
     /*background-color: #90E0EF;
     background-color: #e9e9e9;
     backdrop-filter: blur(5px);
-    */background-image: url(./assets/bg/blobs.png);
+    */
+    /* background-image: url(./assets/bg/blobs.png); */
     animation: 8s bg-animate infinite alternate;
     -webkit-animation: 30s bg-animate infinite alternate;
 }
@@ -42,9 +46,10 @@ body {
 
 .content {
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
-    max-width: 50%;
+    max-width: min-content;
     height: calc(var(--body-link-fs)*16*2);
     gap: var(--body-link-fs);
 }
@@ -61,48 +66,68 @@ h2 {
     opacity: 0.6;
 }
 
-.titles {
+.resources {
+    /* border:solid 2px red; */
     display: flex;
+    flex-direction: column;
     flex-wrap: nowrap;
-    align-items: center;
+    justify-content: center;
+    gap:12px;
+    padding: 10px;
+    width: fit-content;
 }
 
 .title-text {
+    display: inline;
+    color: inherit;
     font-size: var(--body-link-fs);
     font-weight: 100;
     line-height: calc(var(--body-link-fs)*1.1);
-    opacity: 0.8;
+    opacity: 0.9;
     text-wrap: nowrap;
+    overflow-x: visible;
+    background-color: #00000000;
 }
 
-.titles:hover {
+.resources:hover {
     opacity: 1;
-    top: scale(1.1);
-    -webkit-top: scale(1.1);
-    -moz-top: scale(1.1);
-    -ms-top: scale(1.1);
-    -o-top: scale(1.1);
-    transition: 0.4s;
-    -webkit-transition:ease-in-out 0.5s;
-    -moz-transition: 0.4s;
-    -ms-transition: 0.4s;
-    -o-transition: 0.4s;
+    color: #003550;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: rgba(240, 248, 255, 0.702);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
 }
-.titles:hover .arrow-animation{
-    display: block;
+/* 
+.resources:hover {
+    opacity: 1;
+    transition: transform 0.4s;
+    -webkit-transition: transform 0.4s;
+    -moz-transition: transform 0.4s;
+    -ms-transition: transform 0.4s;
+    -o-transition: transform 0.4s;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
 }
 
 .title-text:hover{
     font-weight: 700;
     text-wrap: nowrap;
-    background-color: aliceblue;
+    color: #003550;
+    background-color: rgba(240, 248, 255, 0.702);
     padding:5px;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-}
+} */
 
 .arrow-animation {
     display: none;
@@ -117,7 +142,13 @@ h2 {
 }
 
 .description-text {
+    /* border: 2px red solid; */
+    max-width: fit-content;
     display: none;
+    background-color: #00000000;
+    color: inherit;
+    padding: 0;
+    margin-left:5px;
 }
 
 .bg-svg{
@@ -135,18 +166,27 @@ h2 {
     -o-transform: translateX(-100%);
 }
 
-.titles:hover .highlight-0 {
-    transition: transform 1s;
-    -webkit-transition: transform 1s;
-    -moz-transition: transform 1s;
-    -ms-transition: transform 1s;
-    -o-transition: transform 1s;
-    transform: translateX(200%);
-    -webkit-transform: translateX(200%);
-    -moz-transform: translateX(200%);
-    -ms-transform: translateX(200%);
-    -o-transform: translateX(200%);
+.open {
+    opacity: 1;
+    color: #003550;
+    background-color: rgba(240, 248, 255, 0.702);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
 }
+
+/* .display-area {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    padding: 10px;
+    border: 2px red solid;
+    background-color: aliceblue;
+} */
 
 /* .highlight-0{
     top: 0vw;
