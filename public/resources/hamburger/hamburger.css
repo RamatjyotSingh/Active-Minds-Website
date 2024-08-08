@@ -1,7 +1,7 @@
 #menu {
     z-index: 2;
     --menu-margin: 40px;
-    /* --menu-bar-thickness: ((barThickness)*(number of bars))+((gap between bars)*(number of bars - 1)) */
+    /* --menu-bar-thickness = ((barThickness)*(number of bars))+((gap between bars)*(number of bars - 1)) */
     --menu-bar-thickness: 23px;
     --menu-list-margin-top: calc(var(--menu-margin)*1.5 + var(--menu-bar-thickness));
     font-family: inherit;
@@ -10,9 +10,11 @@
 #menu-bar {
     width: 35px;
     height: var(--menu-bar-thickness);
-    margin: var(--menu-margin) 0 15px var(--menu-margin);
+    margin: 0 0 15px 0;
     cursor: pointer;
     position: fixed;
+    top: var(--menu-margin);
+    left: var(--menu-margin);
 }
   
 .bar {
