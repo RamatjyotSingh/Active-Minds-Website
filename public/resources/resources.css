@@ -65,7 +65,21 @@ h2 {
     opacity: 0.6;
 }
 
-/* CENTERS ALL THE LINKS */
+/* CLUB - LOGO */
+.club-logo {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 1vw;
+    right: 3vw;
+    z-index: 10;
+}
+.club-logo > * {
+    width: 100%;
+    height: 100%;
+}
+
+/* CENTERS ALL THE RESOURCES LINKS */
 .content {
     display: flex;
     position: relative;
