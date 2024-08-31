@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="layout">
+       
+    <header>
+        <nav>
+        <div class="navbar">Navbar goes here</div>
+        </nav>
+        
+            <section class="hero-container">
+                    <img src="./assets/image.png" alt="" class="blob">
+                    <div class="hero">
+                        <div class="hero__content">
+                            <h1>Join the Journey</h1>
+                            <p><i>Explore events that inspire, connect, and empower. Be a part of our story.</i></p>
+                        </div>
+                        <!-- <div class="blob">
+                            
+                        </div> -->
+
+                        <div class="hero__image"><img src="./assets/group-photo2.webp" alt=""></div>
+                    </div>
+
+                    <!-- bg imges -->
+                    <img class=" clouds cloud1"src="./assets/cloud-twirl-2.png" alt="" >
+                    <img class="clouds cloud2"src="./assets/cloud-wisp-3.png" alt="">
+                    <img class="clouds cloud3"src="./assets/cloud-wisp-3-1.png" alt="">
+           
+                <svg xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+                        <feBlend in="SourceGraphic" in2="goo" />
+                      </filter>
+                    </defs>
+                </svg>
+                 
+            </section>
+    </header>
+    <main>
+        <section class="events-container">
+             <div class="gradients-container">
+            <div class="g1"></div>
+            <div class="g2"></div>
+            <div class="g3"></div>
+            <div class="g4"></div>
+            <div class="g5"></div>
+            <div class="interactive"></div>
+       
+        </div>
+            <nav>
+                <ul class="event-list">
+                    <li class="event-list__item active" data-container="all-events">All</li>
+                    <li class="event-list__item" data-container="upcoming-events">Upcoming</li>
+                    <li class="event-list__item" data-container="past-events">Past</li>
+                    <li class="event-list__item" data-container="archives">Archives</li>
+                    <li class="event-list__item" data-container="tools-n-tips">Tools & Tips</li>
+                    <li class="event-list__item" data-container="newsletter">Newsletter</li>
+                </ul>
+            </nav>
+            <div class="cards-container active" id="all-events"></div>
+            <div class="cards-container" id="upcoming-events"></div>
+            <div class="cards-container" id="past-events"></div>
+            <div class="cards-container" id="tools-n-tips"></div>
+            <div class="cards-container" id="newsletter"></div>
+            <div class="cards-container" id="archives"></div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer__logo">
+                <img src="./assets/logo.png" alt="logo">
+            </div>
+            <div class="footer__content">
+                <p>© 2021 All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    </div>
+    <script src="./scripts.js"></script>
+
+</body>
+</html>
