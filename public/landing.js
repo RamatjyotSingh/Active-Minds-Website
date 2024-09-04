@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
            }
        }
 
-    function createBee(beeClass) {
+       function createBee(beeClass) {
         const bee = document.createElement('div');
         bee.classList.add('bee', beeClass);
         document.body.appendChild(bee);
@@ -131,41 +131,35 @@ document.addEventListener('DOMContentLoaded', () => {
             const viewportWidth = window.innerWidth;
             const viewportHeight = window.innerHeight;
     
-            // Generate a random start X position between 0 and the viewport width
             let startX = Math.random() * viewportWidth; 
-            let startY = Math.random() * viewportHeight; // Random start Y position
-            let endX = viewportWidth; // End at the right side of the viewport
+            let startY = Math.random() * viewportHeight; 
+            let endX = viewportWidth; 
     
             bee.style.position = 'fixed';
             bee.style.left = `${startX}px`;
             bee.style.top = `${startY}px`;
     
-            const duration = 30000; // Total duration of one move cycle
-            const oscillationAmplitude = 100; // Amplitude of oscillation
+            const duration = 30000; 
+            const oscillationAmplitude = 100; 
             let startTime = null;
     
             function animate(time) {
                 if (!startTime) startTime = time;
                 const elapsed = time - startTime;
     
-                // Calculate horizontal movement
-                const progress = (elapsed % duration) / duration; // Progress through the duration cycle
+                const progress = (elapsed % duration) / duration;
                 const newX = startX + (endX - startX) * progress;
-    
-                // Calculate vertical oscillation
                 const oscillation = Math.sin(progress * Math.PI * 2) * oscillationAmplitude;
     
-                // Apply the calculated positions
                 bee.style.transform = `translate(${newX}px, ${startY + oscillation}px)`;
     
-                // Loop the animation
                 if (elapsed < duration) {
                     requestAnimationFrame(animate);
                 } else {
-                    startTime = null; // Reset start time for the next cycle
-                    startY = Math.random() * viewportHeight; // Change start Y position for variety
-                    startX = Math.random() * viewportWidth; // Change start X position for variety
-                    requestAnimationFrame(animate); // Continue the animation
+                    startTime = null;
+                    startY = Math.random() * viewportHeight;
+                    startX = Math.random() * viewportWidth;
+                    requestAnimationFrame(animate);
                 }
             }
     
@@ -177,9 +171,8 @@ document.addEventListener('DOMContentLoaded', () => {
         return bee;
     }
     
-
-    // Create bees
-    createBee('bee1');
+    createBee('bee');
+    
 
     // Add glow effect to social icons on click
     const socialIcons = document.querySelectorAll('.social-icon');
