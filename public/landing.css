@@ -36,6 +36,132 @@ header {
     height: auto; 
 }
 
+.nav-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.hamburger-menu {
+    cursor: pointer;
+    padding: 15px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1002;
+    transition: transform 0.3s ease;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.menu-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.9); /* Darker background for better visibility */
+    border-bottom-right-radius: 100%;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 1001;
+}
+
+.menu-items {
+    position: fixed;
+    top: 70px;
+    left: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1002;
+}
+
+.menu-items li {
+    margin: 10px 0;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.3s ease;
+}
+
+.menu-items li a {
+    color: grey;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu-items li a:hover {
+    color: rgb(27, 27, 90);
+}
+
+/* Active States */
+.nav-menu.active .menu-background {
+    width: 100vw; /* Cover the entire width of the viewport */
+    height: 100vh; /* Cover the entire height of the viewport */
+    border-bottom-right-radius: 0; /* Remove rounded corner for full coverage */
+}
+
+.nav-menu.active .menu-items {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-menu.active .menu-items li {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.3s;
+}
+
+.nav-menu.active .hamburger-menu span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+.nav-menu.active .hamburger-menu span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-menu.active .hamburger-menu span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+    }
+
+    .menu-items {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #f9f9f9;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .menu-items.active {
+        display: flex;
+    }
+
+    .menu-items li {
+        margin: 10px 0;
+    }
+}
+
+
 /* ACTIVE Text Styling */
 .active-text {
     color: #a4d670; /* Original text color */
@@ -62,6 +188,36 @@ header {
         -1px -1px 0 #000, /* Black shadow to the top-left */
         1px -1px 0 #000, /* Black shadow to the bottom-left */
         -1px 1px 0 #000; /* Black shadow to the top-right */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    body {
+        padding: 0 10px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .about-content {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-left: 0;
+        color: #3E2723;
+    }
+
+    .logo {
+        width: 60px;
+    }
+
+    #top-bar {
+        padding: 10px 20px;
+    }
 }
 
 
@@ -187,11 +343,12 @@ h1 {
 h2 {
     font-family: 'Poppins', sans-serif;
     letter-spacing: 0.05em;
-    font-size: 28px;
+    font-size: 20px;
     color:  #3E2723; 
     text-align: center;
     font-weight: 400;
     margin-top: 0; /* Remove top margin to make it closer to h1 */
+    margin-right: -15px
 }
 
 /* Scroll Indicator */
@@ -325,8 +482,20 @@ h2 {
     margin: 0 auto; 
     max-width: 600px; 
 }
+.about-title {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    position: relative;
+    top: -13.5px;
+    overflow: hidden; /* Ensures that the text is cut off when outside the container */
+    white-space: nowrap; /* Prevents text from wrapping */
+    border-right: 2px solid black; /* Creates the blinking cursor effect */
+    width: 0; /* Initial width of the text */
+}
 
-/* Keyframes for the typewriter effect */
+/* Keyframes for typewriter and blink-caret */
 @keyframes typewriter {
     from {
         width: 0;
@@ -337,7 +506,8 @@ h2 {
 }
 
 @keyframes blink-caret {
-    from, to {
+    from,
+    to {
         border-color: transparent;
     }
     50% {
@@ -345,17 +515,17 @@ h2 {
     }
 }
 
-.about-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #2c3e50;
-    margin-bottom: 10px;
-    position: relative;
-    top: -13.5px;
-    overflow: hidden; /* Ensures that the text is cut off when outside the container */
-    white-space: nowrap; /* Prevents text from wrapping */
-    border-right: 2px solid black; /* Creates the blinking cursor effect */
+/* Animation class for triggering typewriter effect */
+.start-animation {
     animation: typewriter 9s steps(40, end), blink-caret 0.75s step-end infinite;
+    width: 100%;
+}
+
+
+/* Animation class */
+.start-animation {
+    animation: typewriter 9s steps(40, end), blink-caret 0.75s step-end infinite;
+    width: 100%; /* Set width to full when animation starts */
 }
 
 .about-description {
@@ -401,108 +571,6 @@ h2 {
 }
 
 
-/* Top Bar Container */
-#top-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #ffffff; /* Light background color */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px; /* Padding for spacing */
-    z-index: 1000; /* Ensure it appears above other elements */
-}
-
-/* Menu Bar Styling */
-#menu-bar {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-#menu-bar .bar {
-    width: 30px;
-    height: 3px;
-    background-color: #2c3e50; /* Dark color for bars */
-    margin: 4px;
-    border-radius: 3px;
-    transition: 0.3s ease;
-}
-
-/* Navigation Menu */
-.nav {
-    display: flex;
-    align-items: center;
-}
-
-.nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-.nav ul li {
-    margin: 0 15px;
-}
-
-.nav ul li a {
-    text-decoration: none;
-    color: #2c3e50; /* Dark color for text */
-    font-family: 'Poppins', sans-serif; /* Modern font */
-    font-size: 1rem; /* Font size */
-    font-weight: 600;
-    transition: color 0.3s ease; /* Smooth color transition */
-}
-
-.nav ul li a:hover {
-    color: #3498db; /* Highlight color on hover */
-}
-
-/* Menu Background Overlay */
-.menu-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    opacity: 0;
-    visibility: hidden; /* Initially hidden */
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    z-index: 999; /* Ensure it’s behind the menu */
-}
-
-/* Active States */
-.menu-active #menu-bar .bar {
-    background-color: #ffffff; /* Change bar color when active */
-}
-
-.menu-active #bar1 {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.menu-active #bar2 {
-    opacity: 0;
-}
-
-.menu-active #bar3 {
-    transform: rotate(-45deg) translate(5px, -5px);
-}
-
-.menu-active #nav {
-    right: 0; /* Slide in menu */
-}
-
-.menu-active #menu-bg {
-    opacity: 1;
-    visibility: visible; /* Show background overlay */
-}
 
 
 /* Animation Keyframes */
@@ -792,3 +860,4 @@ h2 {
     }
     
 }
+
