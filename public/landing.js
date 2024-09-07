@@ -110,6 +110,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     observer.observe(aboutSection);
+    // Intersection Observer for the typewriter effect on .about-title
+    const aboutTitle = document.querySelector('.about-title');
+
+    if (aboutTitle) {
+        const titleObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    aboutTitle.classList.add('start-animation');
+                    observer.unobserve(aboutTitle); // Stops observing after animation starts
+                }
+            });
+        }, {
+            threshold: 0.5, // Adjusts the amount of visibility required to trigger the animation
+        });
+
+        titleObserver.observe(aboutTitle);
+    }
 
        // Check if the page is Home or Contact Us before creating balls
        const body = document.body;
@@ -131,47 +148,63 @@ document.addEventListener('DOMContentLoaded', () => {
             const viewportWidth = window.innerWidth;
             const viewportHeight = window.innerHeight;
     
-            let startX = Math.random() * viewportWidth; 
-            let startY = Math.random() * viewportHeight; 
-            let endX = viewportWidth; 
+            // Define movement duration and oscillation amplitude
+            const duration = 15000; // 15 seconds
+            const oscillationAmplitude = 100; // Oscillation amplitude for up-down movement
     
-            bee.style.position = 'fixed';
-            bee.style.left = `${startX}px`;
-            bee.style.top = `${startY}px`;
+            // Function to animate the bee
+            function animateBee() {
+                let startX = -100; // Offscreen to the left
+                let startY = Math.random() * viewportHeight; // Random vertical start point on re-entry
+                bee.style.position = 'fixed';
+                bee.style.left = `${startX}px`;
+                bee.style.top = `${startY}px`;
+                
+                let startTime = null;
     
-            const duration = 30000; 
-            const oscillationAmplitude = 100; 
-            let startTime = null;
+                function animate(time) {
+                    if (!startTime) startTime = time;
+                    const elapsed = time - startTime;
     
-            function animate(time) {
-                if (!startTime) startTime = time;
-                const elapsed = time - startTime;
+                    // Calculate progress from 0 to 1 over the given duration
+                    const progress = (elapsed % duration) / duration;
     
-                const progress = (elapsed % duration) / duration;
-                const newX = startX + (endX - startX) * progress;
-                const oscillation = Math.sin(progress * Math.PI * 2) * oscillationAmplitude;
+                    // Determine the direction of the bee (rightward in first half, leftward in second half)
+                    const direction = progress < 0.5 ? 1 : -1; // 1 when moving right, -1 when moving left
+                    const adjustedProgress = direction === 1 ? progress : 1 - progress; // Adjust progress for return trip
     
-                bee.style.transform = `translate(${newX}px, ${startY + oscillation}px)`;
+                    // Calculate the new X position
+                    const newX = startX + viewportWidth * adjustedProgress * 2; // Moves across screen and back
+                    // Calculate the Y position with oscillation
+                    const oscillation = Math.sin(progress * Math.PI * 2) * oscillationAmplitude;
     
-                if (elapsed < duration) {
-                    requestAnimationFrame(animate);
-                } else {
-                    startTime = null;
-                    startY = Math.random() * viewportHeight;
-                    startX = Math.random() * viewportWidth;
+                    // Apply transformations to the bee's position
+                    bee.style.transform = `translate(${newX * direction}px, ${startY + oscillation}px)`;
+    
+                    // Restart the animation loop with new random height after one full cycle
+                    if (progress >= 1) {
+                        startX = -100; // Reset to offscreen left
+                        startY = Math.random() * viewportHeight; // New random vertical start position
+                        startTime = time; // Reset animation time
+                    }
+    
                     requestAnimationFrame(animate);
                 }
+    
+                requestAnimationFrame(animate);
             }
     
-            requestAnimationFrame(animate);
+            animateBee();
         }
     
         moveBee();
-    
         return bee;
     }
     
-    createBee('bee');
+    // Create the bee with the continuous, oscillating, and random left-entry behavior
+    createBee('bee1');
+    
+    
     
 
     // Add glow effect to social icons on click
@@ -234,5 +267,41 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-   
+    const navMenu = document.querySelector('.nav-menu');
+    const hamburger = document.querySelector('.hamburger-menu');
+    const menuItems = document.querySelectorAll('.menu-items li');
+
+    hamburger.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+        
+        if (navMenu.classList.contains('active')) {
+            menuItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.transitionDelay = `${index * 0.1}s`;
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateX(0)';
+                }, 300);
+            });
+        } else {
+            menuItems.forEach((item) => {
+                item.style.transitionDelay = '0s';
+                item.style.opacity = '0';
+                item.style.transform = 'translateX(-20px)';
+            });
+        }
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!navMenu.contains(event.target) && navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+            menuItems.forEach((item) => {
+                item.style.transitionDelay = '0s';
+                item.style.opacity = '0';
+                item.style.transform = 'translateX(-20px)';
+            });
+        }
+    });
+
+
 });
