@@ -1,0 +1,141 @@
+/* Social Icons */
+.social-icon {
+    font-size: 40px;
+    padding: 10px;
+    width: 60px; 
+    height: 60px;
+}
+
+.social-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Social Icons Container */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+/* Social Icon Container */
+.social-icon {
+    font-size: 2.5rem; /* Adjusted for better scaling */
+    padding: 15px; /* Slightly reduced padding */
+    border-radius: 50%; /* Circular shape */
+    background-color: #ddf5e6;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    color: black ; /* Darker color for a modern look */
+    cursor: pointer;
+    margin: 0 12px; /* Slightly increased margin */
+    text-decoration: none; /* Remove underline */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px; /* Adjusted width */
+    height: 70px; /* Adjusted height */
+    line-height: 1;
+ 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Base shadow for a subtle 3D effect */
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+ 
+.social-icon img {
+    width: 60px; 
+    height: 60px; 
+    opacity: 1; 
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    color: #fff;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover colors for each social icon */
+.social-icon.facebook:hover {
+    background-color: #3b5998; 
+    color: #fff; 
+}
+
+.social-icon.twitter:hover {
+    background-color: #1da1f2; 
+    color: #fff; 
+}
+
+.social-icon.instagram:hover {
+    background-color: #e1306c; 
+    color: #fff; 
+}
+
+.social-icon.telegram:hover {
+    background-color: #0077b5; 
+    color: #fff; 
+}
+
+.social-icon.discord:hover {
+    background-color: #7289da; 
+    color: #fff; 
+}
+
+.social-icon.email:hover {
+    background-color: #d44638;
+    color: #fff; 
+}
+
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .social-icon {
+        font-size: 40px;
+        padding: 15px;
+        width: 70px; 
+        height: 70px; 
+    }
+
+    .social-icon img {
+        width: 50px; 
+        height: 50px; 
+    }
+}
+
+
+/* Glow effect */
+.glow {
+    box-shadow: 0 0 15px rgba(255, 255, 0, 0.8); 
+    transform: scale(1.3); 
+}
+.social-icon-img {
+    width: 50px; /* Adjusted to better match the size of social icons */
+    height: 50px; /* Adjusted to maintain the circular shape */
+    object-fit: contain; /* Ensures the image fits well within the container */
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    color: #36e936;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+.social-icon.linktree:hover{
+    background-color: #36e936;
+    color: #fff; 
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .social-icon {
+        font-size: 40px;
+        padding: 15px;
+        width: 70px; 
+        height: 70px;
+    }
+
+    .social-icon-img {
+        width: 50px; 
+        height: 50px; 
+    }
+    
+}
