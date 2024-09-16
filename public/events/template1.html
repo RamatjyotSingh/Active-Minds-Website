@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Event page template with details and interactive elements.">
+    <title>Event Template</title>
+    <link rel="stylesheet" href="./template.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="../../Components/navbar/navbar.css">
+
+</head>
+<body>
+    <div class="layout">
+        <!-- Navbar Section -->
+        <div class="navbar-container">
+            <!-- Navbar content goes here -->
+        </div>
+        
+        <!-- Slider Section -->
+        <div class="slider-wrapper">
+            <ul class="slider-track">
+                <li class="slide" style="--url: url('./assets/group-photo.jpg');" data-index="0"></li>
+                <li class="slide" style="--url: url('./assets/group-photo3.webp');" data-index="1"></li>
+                <li class="slide" style="--url: url('./assets/group-photo2.webp');" data-index="2"></li>
+            </ul>
+            <nav class="slider-nav">
+                <div class="dot active" data-index="0"></div>
+                <div class="dot" data-index="1"></div>
+                <div class="dot" data-index="2"></div>
+            </nav>
+        </div>
+        
+        <!-- Event Details Section -->
+        <section class="event-wrapper">
+            <div class="content">
+                <h1 class="event-title">Event Title</h1>
+                <p class="event-description">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed temporibus corrupti doloremque aliquid impedit facere architecto
+                </p>
+            
+                <div class="event-details">
+                    <div class="event-detail">
+                        <h3>Date</h3>
+                        <p>Event Date</p>
+                    </div>
+                    <div class="event-detail">
+                        <h3>Time</h3>
+                        <p>Event Time</p>
+                    </div>
+                    <div class="event-detail">
+                        <h3>Location</h3>
+                        <p>Event Location</p>
+                    </div>
+                </div>
+            </div>
+            <iframe
+                class="map"
+                loading="lazy"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2605.282774303445!2d-97.1384516843117!3d49.80778597939368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52ea715c5b5a7b7d%3A0x5b5a7b7d!2sUniversity%20of%20Manitoba!5e0!3m2!1sen!2sca!4v1633045678901!5m2!1sen!2sca"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+        </section>
+        
+        <!-- Download Section -->
+        <div class="download-section d-none">
+            <h3>Download Event Materials</h3>
+            <a href="../../extra-assets/funy-monke.jpeg" download="Event_Materials.avif">Don't Click!!</a>
+        </div>
+        
+        <!-- Register Button -->
+        <div class="register-container">
+            <a class="register" href="#">
+                <h3>Sign Up</h3>
+            </a>
+        </div>
+    </div>
+    <!-- <footer class="social-links">
+
+         <div class="social-icons">
+             <a href="https://t.me/+xaofJQ6xy4UxZjg5.com" target="_blank" class="social-icon telegram">
+                <i class="fab fa-telegram-plane"></i>
+                     </a>
+                     <a href="https://www.instagram.com/uofm_activeminds" target="_blank" class="social-icon instagram">
+                <i class="fab fa-instagram"></i>
+                     </a>
+                     <a href="https://www.facebook.com/uofm.activeminds" target="_blank" class="social-icon facebook">
+                <i class="fab fa-facebook"></i>
+                     </a>
+                     <a href="https://twitter.com/uofm_activeminds" target="_blank" class="social-icon twitter">
+                <i class="fab fa-twitter"></i>
+                     </a>
+         </div>
+    </footer>
+  -->
+    <script src="../../Components/navbar/navbar.js"></script>
+    <script src="./template.js" ></script>
+</body>
+</html>
