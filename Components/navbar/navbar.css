@@ -1,4 +1,24 @@
-
+:root {
+    --font-family: 'Poppins', sans-serif, 'Averia Serif Libre', serif;
+    --earls-green: #afb937;
+    --tamarind: #361f16;
+    --atoll: #0d4b7a;
+    --hippie-green: #5e8a4c;
+    --citron: #93a524;
+    --denim: #1387ba;
+    --downriver: #07243f;
+    --kabul: #5e4a3a;
+    --rich-gold: #9d5306;
+    --gulf-blue: #041c54;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html,  body{
+    overflow-x: hidden;
+}
 .navbar{
     padding:20px ;
     position: relative;
@@ -12,7 +32,6 @@
     /* --menu-bar-thickness = ((barThickness)*(number of bars))+((gap between bars)*(number of bars - 1)) */
     --menu-bar-thickness: 23px;
     --menu-list-margin-top: calc(var(--menu-margin)*1.5 + var(--menu-bar-thickness));
-    font-family: inherit;
     border-bottom: #003366 solid 1px;
     margin-bottom: 2rem;
 }
@@ -102,7 +121,7 @@
     
     .navbar__menu-item a:hover,
     .navbar__menu-item a.active {
-        background-color: #7ab348; /* Darker shade of blue */
+        background-color: var(--rich-gold); /* Darker shade of blue */
         /* background-color: #b2bd2a; check this one out which is better */
         color: #ffffff; /* White text color for better readability on hover */
     }
