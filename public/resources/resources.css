@@ -4,6 +4,8 @@
     --fs-medium: max(1.4vw,0.9rem);
     --fs-small: max(1.1vw,0.7rem);
     --bg-img-width: max(40vw,40vh);
+    --light-bg-color: #003550;
+    --dark-bg-color: #072839;
 }
 
 * {
@@ -36,14 +38,15 @@ body {
     overflow-y: visible;
     height: auto;
     padding-top: 25vh;
-    background-image: url(./assets/bg/blob.svg);
+    background-color: var(--light-bg-color);
+    /* background-image: url(./assets/bg/blob.svg); */
     animation: 20s bg-animate infinite alternate;
     -webkit-animation: 20s bg-animate infinite alternate;
 }
 
 
 /* BACKGROUND IMAGE ANIMATION */
-@keyframes bg-animate {
+/* @keyframes bg-animate {
     from {
         background-position-x: 0%;
         background-position-y: 0%;
@@ -52,7 +55,7 @@ body {
         background-position-x: 100%;
         background-position-y: 80%;
     }
-}
+} */
 
 
 h1 {

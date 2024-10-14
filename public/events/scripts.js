@@ -141,13 +141,12 @@ function initializeEventHandling(eventList) {
 initializeEventHandling(eventList);
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM loaded');
     const container = document.querySelector('.cards-container'); // Assuming .container is the parent element
 
     container.addEventListener('click', function(event) {
         const cardType = event.target.closest('.card__type');
         if (cardType) {
-            console.log(cardType);
+            
             const dateElement = cardType.closest('.card__date');
             const date = new Date(dateElement ? dateElement : '');
             const today = new Date();
@@ -167,109 +166,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     toggleReadMore();
 });
-// const canvas = document.getElementById('blobCanvas');
-// const ctx = canvas.getContext('2d');
 
-// canvas.width = window.innerWidth;
-// canvas.height = window.innerHeight;
-
-// let mouseX = canvas.width / 2;
-// let mouseY = canvas.height / 2;
-// let mouseDown = false;
-
-// const blob = {
-//     x: canvas.width / 2,
-//     y: canvas.height / 2,
-//     radius: 100,
-//     segments: 30,
-//     noise: [],
-//     velocity: [],
-//     baseNoise: 0.5,
-//     speed: 0.05,
-//     damping: 0.98
-// };
-
-// // Initialize noise and velocity arrays
-// for (let i = 0; i < blob.segments; i++) {
-//     blob.noise.push(Math.random() * blob.baseNoise);
-//     blob.velocity.push(0);
-// }
-
-// function drawBlob() {
-//     ctx.clearRect(0, 0, canvas.width, canvas.height);
-//     ctx.beginPath();
-
-//     for (let i = 0; i < blob.segments; i++) {
-//         const angle = (i / blob.segments) * Math.PI * 2;
-//         const x = blob.x + Math.cos(angle) * (blob.radius + blob.noise[i] * 50);
-//         const y = blob.y + Math.sin(angle) * (blob.radius + blob.noise[i] * 50);
-
-//         if (i === 0) {
-//             ctx.moveTo(x, y);
-//         } else {
-//             ctx.lineTo(x, y);
-//         }
-//     }
-
-//     ctx.closePath();
-//     ctx.fillStyle = 'rgba(100, 150, 250, 0.8)';
-//     ctx.fill();
-
-//     updateBlob();
-// }
-
-// function updateBlob() {
-//     for (let i = 0; i < blob.segments; i++) {
-//         // Calculate distance to mouse
-//         const angle = (i / blob.segments) * Math.PI * 2;
-//         const pointX = blob.x + Math.cos(angle) * blob.radius;
-//         const pointY = blob.y + Math.sin(angle) * blob.radius;
-//         const dx = mouseX - pointX;
-//         const dy = mouseY - pointY;
-//         const distance = Math.sqrt(dx * dx + dy * dy);
-
-//         // Apply force if the mouse is close to the blob
-//         if (mouseDown && distance < blob.radius) {
-//             blob.velocity[i] += (blob.radius - distance) * 0.1;
-//         }
-
-//         // Update noise and apply damping
-//         blob.velocity[i] *= blob.damping;
-//         blob.noise[i] += blob.velocity[i];
-//         blob.noise[i] = Math.max(-blob.baseNoise, Math.min(blob.baseNoise, blob.noise[i]));
-//     }
-
-//     blob.x += (mouseX - blob.x) * 0.05;
-//     blob.y += (mouseY - blob.y) * 0.05;
-// }
-
-// canvas.addEventListener('mousemove', (event) => {
-//     mouseX = event.clientX;
-//     mouseY = event.clientY;
-// });
-
-// canvas.addEventListener('mousedown', () => {
-//     mouseDown = true;
-// });
-
-// canvas.addEventListener('mouseup', () => {
-//     mouseDown = false;
-// });
-
-// function animate() {
-//     drawBlob();
-//     requestAnimationFrame(animate);
-// }
 
 // animate();
 function toggleReadMore() {
     const readMoreList = document.querySelectorAll(".card__read-more"); // Corrected selector
-    console.log(readMoreList);
+    
     readMoreList.forEach((readMore) => {
-        console.log(readMore);
+        
         readMore.addEventListener('click', () => {
             const cardBody = readMore.closest('.card').querySelector('.card__body'); // Corrected element selection
-            console.log(cardBody);
+            
             if (cardBody.classList.contains("card__body--truncated")) {
                 cardBody.classList.remove("card__body--truncated");
                 readMore.textContent = "Read less";
@@ -277,30 +184,26 @@ function toggleReadMore() {
                 cardBody.classList.add("card__body--truncated");
                 readMore.textContent = "Read more";
             }
-            console.log(cardBody);
+            
         });
     });
 }
-// document.addEventListener('DOMContentLoaded', () => {
-//     const interBubble = document.querySelector('.interactive');
-//     let curX = 0;
-//     let curY = 0;
-//     let tgX = 0;
-//     let tgY = 0;
 
-//     function move() {
-//         curX += (tgX - curX) / 20;
-//         curY += (tgY - curY) / 20;
-//         interBubble.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
-//         requestAnimationFrame(() => {
-//             move();
-//         });
-//     }
 
-//     window.addEventListener('mousemove', (event) => {
-//         tgX = event.clientX;
-//         tgY = event.clientY;
-//     });
+function updateBackgroundColor() {
+    const scrollPosition = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollFraction = scrollPosition / docHeight;
 
-//     move();
-// });
+    // Interpolate the background color between #c7e4f3 (blue) and #98ff98 (mint green)
+    const startColor = { r: 123, g: 179, b: 241 }; // Light Royal Blue #7BB3F1
+    const endColor = { r: 185, g: 244, b: 207 }; // Mint green color
+
+    const r = Math.round(startColor.r + (endColor.r - startColor.r) * scrollFraction);
+    const g = Math.round(startColor.g + (endColor.g - startColor.g) * scrollFraction);
+    const b = Math.round(startColor.b + (endColor.b - startColor.b) * scrollFraction);
+
+    document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+}
+updateBackgroundColor()
+window.addEventListener('scroll', updateBackgroundColor);
