@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     navbarContainer.innerHTML = `
         <div class="navbar">
             <div class="navbar__logo">
-                <img src="../club Assets/activeMindsLogo.png" alt="logo"> 
+                <img src="/Active-Minds-Website/public/club Assets/activeMindsLogo.png" alt="logo"> 
             </div>
             <div class="menu-container">
                 <div id="menu-bar">
@@ -12,11 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div id="bar3" class="bar"></div>
                 </div>
                 <ul class="navbar__menu">
-                    <li class="navbar__menu-item"><a href="#">Home</a></li>
-                    <li class="navbar__menu-item"><a href="events.html">Events</a></li>
-                    <li class="navbar__menu-item"><a href="../resources/index.html">Resources</a></li>
-                    <li class="navbar__menu-item"><a href="../aboutus/Teams.html">Team</a></li>
-                    <li class="navbar__menu-item"><a href="#">Contact</a></li>
+                    <li class="navbar__menu-item"><a href="/Active-Minds-Website/public/index.html">Home</a></li>
+                    <li class="navbar__menu-item"><a href="/Active-Minds-Website/public/events.html">Events</a></li>
+                    <li class="navbar__menu-item"><a href="/Active-Minds-Website/public/resources.html">Resources</a></li>
+                    <li class="navbar__menu-item"><a href="/Active-Minds-Website/public/teams.html">Team</a></li>
+                    <li class="navbar__menu-item"><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="menu-bg"></div>
             </div>

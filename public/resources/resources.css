@@ -26,9 +26,17 @@ a {
 a:hover {
     text-decoration: underline;
 }
+body{
+    background-color: var(--light-bg-color);
 
-
-body {
+}
+.navbar{
+    padding-top:2rem ;
+}
+.navbar__menu-item a{
+    color: #e3eef4;
+}
+.layout {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -37,8 +45,7 @@ body {
     padding: 25vh;
     overflow-y: visible;
     height: auto;
-    padding-top: 25vh;
-    background-color: var(--light-bg-color);
+    padding-top: 15vh;
     /* background-image: url(./assets/bg/blob.svg); */
     animation: 20s bg-animate infinite alternate;
     -webkit-animation: 20s bg-animate infinite alternate;

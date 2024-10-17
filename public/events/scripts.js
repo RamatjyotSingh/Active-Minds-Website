@@ -190,6 +190,7 @@ function toggleReadMore() {
 }
 
 
+
 function updateBackgroundColor() {
     const scrollPosition = window.scrollY;
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -202,8 +203,9 @@ function updateBackgroundColor() {
     const r = Math.round(startColor.r + (endColor.r - startColor.r) * scrollFraction);
     const g = Math.round(startColor.g + (endColor.g - startColor.g) * scrollFraction);
     const b = Math.round(startColor.b + (endColor.b - startColor.b) * scrollFraction);
-
-    document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+    const layout = document.querySelector('.layout');
+    
+    layout.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 }
 updateBackgroundColor()
 window.addEventListener('scroll', updateBackgroundColor);
