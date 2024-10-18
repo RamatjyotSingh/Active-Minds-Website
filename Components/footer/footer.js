@@ -2,16 +2,16 @@ const footer=`
    <footer id = "contact">
     <div class="footer__container">
         <div class="footer__logo">
-            <img src="/Active-Minds-Website/public/assets/active minds.webp" alt="logo">
+            <img src="../public/assets/active minds.webp" alt="logo">
         </div>
         <div class="footer__content">
             <div class="footer__nav">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="/Active-Minds-Website/public/index.html">Home</a></li>
-                    <li><a href="/Active-Minds-Website/public/events.html">Events</a></li>
-                    <li><a href="/Active-Minds-Website/public/teams.html">Team</a></li>
-                    <li><a href="/Active-Minds-Website/public/resources.html">Resources</a></li>
+                    <li><a href="../public/index.html">Home</a></li>
+                    <li><a href="../public/events.html">Events</a></li>
+                    <li><a href="../public/teams.html">Team</a></li>
+                    <li><a href="../public/resources.html">Resources</a></li>
                 </ul>
             </div>
             <div class="footer__contact">
