@@ -12,10 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div id="bar3" class="bar"></div>
                 </div>
                 <ul class="navbar__menu">
-                    <li class="navbar__menu-item"><a href="/Active-Minds-Website/public/index.html">Home</a></li>
-                    <li class="navbar__menu-item"><a href="/Active-Minds-Website/public/events.html">Events</a></li>
-                    <li class="navbar__menu-item"><a href="/Active-Minds-Website/public/resources.html">Resources</a></li>
-                    <li class="navbar__menu-item"><a href="/Active-Minds-Website/public/teams.html">Team</a></li>
+                    <li class="navbar__menu-item"><a href="../public/index.html">Home</a></li>
+                    <li class="navbar__menu-item"><a href="../public/events.html">Events</a></li>
+                    <li class="navbar__menu-item"><a href="../public/resources.html">Resources</a></li>
+                    <li class="navbar__menu-item"><a href="../public/teams.html">Team</a></li>
                     <li class="navbar__menu-item"><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="menu-bg"></div>

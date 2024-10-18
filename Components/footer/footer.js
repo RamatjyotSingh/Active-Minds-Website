@@ -8,10 +8,10 @@ const footer=`
             <div class="footer__nav">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">Team</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="/Active-Minds-Website/public/index.html">Home</a></li>
+                    <li><a href="/Active-Minds-Website/public/events.html">Events</a></li>
+                    <li><a href="/Active-Minds-Website/public/teams.html">Team</a></li>
+                    <li><a href="/Active-Minds-Website/public/resources.html">Resources</a></li>
                 </ul>
             </div>
             <div class="footer__contact">
