@@ -4,6 +4,8 @@
     /* --font-family-style-Roboto: 'Roboto', sans-serif; */
     --font-family-style-Roboto: var(--font-family-style);
     --bg-color: #c7e4f3;
+    --title-fs: clamp(1.2rem,2.3rem,5vw);
+    --title-line-height: 3rem;
 }
 
 * {
@@ -416,16 +418,17 @@ h2 {
     max-width: 600px; 
 }
 .about-title {
-    font-size: 2.3rem;
+    font-size: var(--title-fs);
     font-weight: 700;
     color: #2c3e50;
     margin-bottom: 10px;
     position: relative;
     top: -13.5px;
-    overflow: hidden; /* Ensures that the text is cut off when outside the container */
+    overflow: visible; /* Ensures that the text is cut off when outside the container */
     white-space: nowrap; /* Prevents text from wrapping */
     border-right: 2px solid black; /* Creates the blinking cursor effect */
     width: 0; /* Initial width of the text */
+    margin: 0;
 }
 
 /* Keyframes for typewriter and blink-caret */
@@ -643,7 +646,7 @@ h2 {
 .social-icon.instagram:hover { background-color: #e1306c; }
 .social-icon.discord:hover { background-color: #7289da; }
 .social-icon.email:hover { background-color: #d44638; }
-.social-icon.linktree:hover { background-color: #36e936; }
+.social-icon.linktree:hover { background-color: #1c9d1c; }
 
 /* Responsive design */
 @media (max-width: 768px) {
@@ -790,7 +793,8 @@ h2 {
     }
   
     .about-title {
-      font-size: 2rem;
+      font-size: var(--title-fs);
+      margin: 0;
     }
   
     .about-description {
