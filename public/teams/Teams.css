@@ -21,6 +21,8 @@
     --dark-bg-color: #072839;
     --title-font-color: rgb(230, 229, 236);
     --font-family: "Averia Serif Libre", serif !important;
+
+    --navbar-hover-color:#3c65a2be !important; 
 }
 
 * {
@@ -56,6 +58,11 @@ body{
     width: 100px;
     margin-bottom: 20px;
 }
+.navbar__menu-item a:hover,
+.navbar__menu-item a.active {
+    background-color: var(--rich-gold);
+}
+
 h1 { 
     color: var(--title-font-color);
     margin-left: 30px;
