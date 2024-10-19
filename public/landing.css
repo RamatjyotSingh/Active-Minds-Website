@@ -1,8 +1,20 @@
+:root {
+    --font-family-style: "Averia Serif Libre", serif !important;
+    --font-family2: 'Poppins', sans-serif;
+    /* --font-family-style-Roboto: 'Roboto', sans-serif; */
+    --font-family-style-Roboto: var(--font-family-style);
+    --bg-color: #c7e4f3;
+}
+
+* {
+    font-family: var(--font-family);
+}
+
 body {
-    background-color: #c7e4f3; 
+    background-color: var(--bg-color); 
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-family-style);
     transition: background-color 0.5s ease; 
 }
 
@@ -329,7 +341,7 @@ h1, h2 {
 
 /* Headings */
 h1 {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-family-style);
     letter-spacing: 0.05em;
     font-size: 85px; 
     color: #333333; 
@@ -341,7 +353,7 @@ h1 {
 }
 
 h2 {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-family-style);
     letter-spacing: 0.05em;
     font-size: 20px;
     color:  #3E2723; 
@@ -387,7 +399,7 @@ h2 {
     margin-right: 90px; 
     margin-top: 5%; 
     font-size: 20px;
-    font-family: 'Roboto', sans-serif; 
+    font-family: var(--font-family-style-Roboto); 
     line-height: 1.6;
     padding-left: 200px;
     text-align: center; 
@@ -524,14 +536,14 @@ h2 {
     font-size: 2.5rem;
     color: #2c3e50;
     font-weight: 550;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-family-style);
     margin-bottom: 10px;
 }
 
 .contact-subtitle {
     font-size: 1.2rem;
     color: #555;
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-family-style-Roboto);
     margin-bottom: 30px;
 }
 

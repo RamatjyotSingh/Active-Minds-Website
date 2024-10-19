@@ -60,7 +60,7 @@ function updateBackgroundColor() {
 
     // Interpolate the background color between #c7e4f3 (blue) and #98ff98 (mint green)
     const startColor = { r: 0, g: 53, b: 80 }; // Dark blue (#003550)
-const endColor = { r: 0, g: 77, b: 64 }; // Dark green (#004D40)
+    const endColor = { r: 0, g: 77, b: 64 }; // Dark green (#004D40)
 
     const r = Math.round(startColor.r + (endColor.r - startColor.r) * scrollFraction);
     const g = Math.round(startColor.g + (endColor.g - startColor.g) * scrollFraction);
