@@ -9,7 +9,7 @@
     --denim: #1387ba;
     --downriver: #07243f;
     --kabul: #1387ba;
-    --rich-gold: #3c65a2be;
+    --navbar-color: #3c65a2be;
     --gulf-blue: #041c54;
 }
 * {
@@ -122,7 +122,7 @@ html,  body{
     
     .navbar__menu-item a:hover,
     .navbar__menu-item a.active {
-        background-color: var(--rich-gold); /* Darker shade of blue */
+        background-color: var(--navbar-color); /* Darker shade of blue */
         /* background-color: #b2bd2a; check this one out which is better */
         color: #ffffff; /* White text color for better readability on hover */
         text-decoration: none;
