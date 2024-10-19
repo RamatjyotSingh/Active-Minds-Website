@@ -12,7 +12,7 @@ const footer=`
                 <div class="footer__nav">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="../public/index.html"> - Latest updates and news.</a></li>
+                        <li><a href="../public/index.html"> - Back to Homepage.</a></li>
                         <li><a href="../public/events.html">- Upcoming events and workshops.</a> </li>
                         <li><a href="../public/teams.html">- Meet our dedicated team.</a> </li>
                         <li><a href="../public/resources.html">- Explore helpful resources.</a> </li>

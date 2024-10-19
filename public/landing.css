@@ -406,7 +406,7 @@ h2 {
     padding-left: 200px;
     text-align: center; 
     min-height: 300px; 
-    overflow: hidden;
+    overflow: visible;
     z-index: 50; 
     color:  #3E2723; 
 }

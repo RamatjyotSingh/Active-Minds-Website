@@ -8,8 +8,8 @@
     --citron: #93a524;
     --denim: #1387ba;
     --downriver: #07243f;
-    --kabul: #5e4a3a;
-    --rich-gold: #9d5306;
+    --kabul: #1387ba;
+    --rich-gold: #3c65a2be;
     --gulf-blue: #041c54;
 }
 * {
@@ -125,6 +125,7 @@ html,  body{
         background-color: var(--rich-gold); /* Darker shade of blue */
         /* background-color: #b2bd2a; check this one out which is better */
         color: #ffffff; /* White text color for better readability on hover */
+        text-decoration: none;
     }
 }
 @media screen and (max-width: 768px){
@@ -135,7 +136,7 @@ html,  body{
 
     }
     .navbar{
-         margin-bottom:10px;
+        margin-bottom:10px;
         border : none;
     
     }
@@ -167,7 +168,7 @@ html,  body{
     position: absolute;
     z-index: -1;
     border-radius: 50%;
-    background: radial-gradient(circle, #345d9d, #345c9de8);
+    background: radial-gradient(circle, #1e437f, #0c45a1e8);
     height: 0;
     width:0;
 
@@ -215,9 +216,12 @@ html,  body{
     color: #7ab348; /* Example color for the active page */
     font-weight: bold;
     background-color: rgba(115, 118, 104, 0.2); /* Slight white background on hover */
-    padding: 5px 10px; /* Adjust padding as needed */
-    border-radius: 50px; /* Optional: add rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    padding: 5px; 
+    /* Adjust padding as needed */
+    border-radius: 50px; 
+    /* Optional: add rounded corners */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); Add a subtle shadow */
+    text-decoration: none;
 }
 
 
