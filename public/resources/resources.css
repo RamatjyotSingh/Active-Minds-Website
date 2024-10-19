@@ -7,6 +7,8 @@
     --light-bg-color: #003550;
     --dark-bg-color: #072839;
     --font-family: "Averia Serif Libre", serif;
+    --off-white: #e3eef4;
+    --nav-border-color: #e3eef49a;
 }
 
 * {
@@ -16,9 +18,13 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    color: #e3eef4;
+    color: var(--off-white);
 }
 
+/* NAVBAR PAGE SPECIFIC STYLING */
+.navbar {
+    border-color: var(--nav-border-color);
+}
 
 /* LINKS HIGHLIGHTS */
 a {
