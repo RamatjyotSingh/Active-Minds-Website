@@ -6,18 +6,25 @@
     --bg-img-width: max(40vw,40vh);
     --light-bg-color: #003550;
     --dark-bg-color: #072839;
+    --font-family: "Averia Serif Libre", serif;
+    --off-white: #e3eef4;
+    --nav-border-color: #e3eef49a;
 }
 
 * {
-    font-family: "Averia Serif Libre", serif;
+    font-family: var(--font-family);
     margin: 0;
     padding: 0;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    color: #e3eef4;
+    color: var(--off-white);
 }
 
+/* NAVBAR PAGE SPECIFIC STYLING */
+.navbar {
+    border-color: var(--nav-border-color);
+}
 
 /* LINKS HIGHLIGHTS */
 a {
@@ -26,9 +33,17 @@ a {
 a:hover {
     text-decoration: underline;
 }
+body{
+    background-color: var(--light-bg-color);
 
-
-body {
+}
+.navbar{
+    padding-top:2rem ;
+}
+.navbar__menu-item a{
+    color: #e3eef4;
+}
+.layout {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -37,8 +52,7 @@ body {
     padding: 25vh;
     overflow-y: visible;
     height: auto;
-    padding-top: 25vh;
-    background-color: var(--light-bg-color);
+    padding-top: 15vh;
     /* background-image: url(./assets/bg/blob.svg); */
     animation: 20s bg-animate infinite alternate;
     -webkit-animation: 20s bg-animate infinite alternate;

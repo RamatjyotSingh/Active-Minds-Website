@@ -204,21 +204,26 @@ html{
     align-content: center;
     padding:2rem;
     z-index: 10;
-
+    
    
    
 }
 .hero__content h1 {
   font-size: clamp(48px, 10vw, 100px);
-  color:#121515; /* Deep purple for stronger contrast */
+  color: #121515; /* Deep purple for stronger contrast */
   font-weight: 400; /* Bold for emphasis */
   letter-spacing: 0.02em;
-
+  overflow: hidden;
   line-height: 1.2;
   opacity: 0.9; /* Slightly transparent for a softer look */
   z-index: 2; /* Ensure it appears above any overlay */
   margin-bottom: 0.25rem; /* Add margin for spacing */
+  border-right: 2px solid transparent; /* Create a typewriter effect */
+  max-width: fit-content;
+  animation: typewriter 3s steps(30) 1s 1 normal both, blink-caret 0.75s step-end 1s 7; /* Typewriter animation */
 }
+
+
 
 .hero__content p {
   font-family: 'Pacifico','transducer-variable', sans-serif;
@@ -605,4 +610,27 @@ img{
   }
 
   
+}
+
+
+
+
+/* Keyframes for typewriter and blink-caret */
+@keyframes typewriter {
+  from {
+      width: 0;
+  }
+  to {
+      width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+      border-color: transparent;
+  }
+  50% {
+      border-color: black;
+  }
 }

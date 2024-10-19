@@ -190,20 +190,22 @@ function toggleReadMore() {
 }
 
 
+
 function updateBackgroundColor() {
     const scrollPosition = window.scrollY;
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
     const scrollFraction = scrollPosition / docHeight;
-
+ 
     // Interpolate the background color between #c7e4f3 (blue) and #98ff98 (mint green)
-    const startColor = { r: 123, g: 179, b: 241 }; // Light Royal Blue #7BB3F1
-    const endColor = { r: 185, g: 244, b: 207 }; // Mint green color
+    const startColor = { r: 199, g: 228, b: 243 }; // Light Royal Blue #7BB3F1
+    const endColor = { r: 127, g: 189, b: 150 };
 
     const r = Math.round(startColor.r + (endColor.r - startColor.r) * scrollFraction);
     const g = Math.round(startColor.g + (endColor.g - startColor.g) * scrollFraction);
     const b = Math.round(startColor.b + (endColor.b - startColor.b) * scrollFraction);
-
-    document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+    const layout = document.querySelector('.layout');
+    
+    layout.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 }
 updateBackgroundColor()
 window.addEventListener('scroll', updateBackgroundColor);

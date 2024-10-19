@@ -1,8 +1,22 @@
+:root {
+    --font-family-style: "Averia Serif Libre", serif !important;
+    --font-family2: 'Poppins', sans-serif;
+    /* --font-family-style-Roboto: 'Roboto', sans-serif; */
+    --font-family-style-Roboto: var(--font-family-style);
+    --bg-color: #c7e4f3;
+    --title-fs: clamp(1.2rem,2.3rem,5vw);
+    --title-line-height: 3rem;
+}
+
+* {
+    font-family: var(--font-family);
+}
+
 body {
-    background-color: #c7e4f3; 
+    background-color: var(--bg-color); 
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-family-style);
     transition: background-color 0.5s ease; 
 }
 
@@ -329,7 +343,7 @@ h1, h2 {
 
 /* Headings */
 h1 {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-family-style);
     letter-spacing: 0.05em;
     font-size: 85px; 
     color: #333333; 
@@ -341,7 +355,7 @@ h1 {
 }
 
 h2 {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-family-style);
     letter-spacing: 0.05em;
     font-size: 20px;
     color:  #3E2723; 
@@ -387,12 +401,12 @@ h2 {
     margin-right: 90px; 
     margin-top: 5%; 
     font-size: 20px;
-    font-family: 'Roboto', sans-serif; 
+    font-family: var(--font-family-style-Roboto); 
     line-height: 1.6;
     padding-left: 200px;
     text-align: center; 
     min-height: 300px; 
-    overflow: hidden;
+    overflow: visible;
     z-index: 50; 
     color:  #3E2723; 
 }
@@ -404,16 +418,17 @@ h2 {
     max-width: 600px; 
 }
 .about-title {
-    font-size: 2.3rem;
+    font-size: var(--title-fs);
     font-weight: 700;
     color: #2c3e50;
     margin-bottom: 10px;
     position: relative;
     top: -13.5px;
-    overflow: hidden; /* Ensures that the text is cut off when outside the container */
+    overflow: visible; /* Ensures that the text is cut off when outside the container */
     white-space: nowrap; /* Prevents text from wrapping */
     border-right: 2px solid black; /* Creates the blinking cursor effect */
     width: 0; /* Initial width of the text */
+    margin: 0;
 }
 
 /* Keyframes for typewriter and blink-caret */
@@ -524,14 +539,14 @@ h2 {
     font-size: 2.5rem;
     color: #2c3e50;
     font-weight: 550;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-family-style);
     margin-bottom: 10px;
 }
 
 .contact-subtitle {
     font-size: 1.2rem;
     color: #555;
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-family-style-Roboto);
     margin-bottom: 30px;
 }
 
@@ -631,7 +646,7 @@ h2 {
 .social-icon.instagram:hover { background-color: #e1306c; }
 .social-icon.discord:hover { background-color: #7289da; }
 .social-icon.email:hover { background-color: #d44638; }
-.social-icon.linktree:hover { background-color: #36e936; }
+.social-icon.linktree:hover { background-color: #1c9d1c; }
 
 /* Responsive design */
 @media (max-width: 768px) {
@@ -778,7 +793,8 @@ h2 {
     }
   
     .about-title {
-      font-size: 2rem;
+      font-size: var(--title-fs);
+      margin: 0;
     }
   
     .about-description {

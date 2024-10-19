@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ACTIVE MINDS</title>
     <link rel="stylesheet" href="landing.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
@@ -12,6 +17,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 
+
+    <link rel="stylesheet" href="../Components/navbar/navbar.css">
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
@@ -21,91 +28,95 @@
 
 </head>
 <body>
-    <body class="home-page">
-    <header>
-        <div class="logo-container">
-            <img src="./assets/active minds.webp" alt="Your Logo" class="logo">
-        </div>
-        <div class="logo-container">
-            <img src="./assets/active minds.webp" alt="Your Logo" class="logo">
-        </div>
-        <nav class="nav-menu">
-            <div class="hamburger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+    <div class="home-page">
+       
+        <header>
+            <div class="navbar-container">
+                <script src = "../Components/navbar/navbar.js"></script>
             </div>
-            <ul class="menu-items">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+            <!-- <div class="logo-container">
+                <img src="./assets/active minds.webp" alt="Your Logo" class="logo">
+            </div>
+            <div class="logo-container">
+                <img src="./assets/active minds.webp" alt="Your Logo" class="logo">
+            </div>
+            <nav class="nav-menu">
+                <div class="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="menu-items">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav> -->
+        </header>
 
-    <div id="home" class="section home-page">
-        <div class="text-wrapper">
-            <h1><span class="active-text">ACTIVE</span> <span class="minds-text">MINDS</span></h1>
-            <h2 class="sub-heading">Empowering Bisons to Thrive Mentally</h2>
-            <div class="scroll-indicator">
-                <span>Scroll for more</span>
+        <div id="home" class="section home-page">
+            <div class="text-wrapper">
+                <h1><span class="active-text">ACTIVE</span> <span class="minds-text">MINDS</span></h1>
+                <h2 class="sub-heading">Empowering Bisons to Thrive Mentally</h2>
+                <div class="scroll-indicator">
+                    <span>Scroll for more</span>
+                </div>
             </div>
+            
+        </div>
+
+        <div id="about" class="section">
+            <div class="about-content" data-aos="fade-up">
+                <h2 class="about-title">Welcome to UM Active Minds</h2>
+                <p class="about-description">
+                    We are a dedicated student organization at the University of Manitoba committed to promoting mental health awareness. Through engaging events, educational initiatives, and strong advocacy, we strive to empower our campus community. Join us in our mission to prioritize mental health, foster meaningful conversations, and make a lasting impact. 
+                </p>
+            </div>
+            <img src="./assets/boy.jpg" alt="Student participating in mental health event" class="about-image">
         </div>
         
-    </div>
+        
 
-    <div id="about" class="section">
-        <div class="about-content" data-aos="fade-up">
-            <h2 class="about-title">Welcome to Active Minds UM</h2>
-            <p class="about-description">
-                We are a dedicated student organization at the University of Manitoba committed to promoting mental health awareness. Through engaging events, educational initiatives, and strong advocacy, we strive to empower our campus community. Join us in our mission to prioritize mental health, foster meaningful conversations, and make a lasting impact. 
-            </p>
-        </div>
-        <img src="./assets/boy.jpg" alt="Student participating in mental health event" class="about-image">
-    </div>
-    
-    
+        <div id="contact" class="section contact-page">
+            <div class="cta" data-aos="fade-up">
+                <h2 class="contact-title">Get in Touch!</h2>
+                <p class="contact-subtitle">
+                    We'd love to hear from you. Reach out to us on social media!
+                </p>
+            </div>
 
-    <div id="contact" class="section contact-page">
-        <div class="cta" data-aos="fade-up">
-            <h2 class="contact-title">Get in Touch!</h2>
-            <p class="contact-subtitle">
-                We'd love to hear from you. Reach out to us on social media!
-            </p>
+            <div class="social-icons">
+                <a href="https://t.me/+xaofJQ6xy4UxZjg5" target="_blank" class="social-icon telegram">
+                    <img src="./assets/telegram.png" alt="Telegram" class="social-icon-img">
+                </a>
+                <a href="https://www.instagram.com/uofm_activeminds" target="_blank" class="social-icon instagram">
+                    <img src="./assets/instagram.png" alt="Instagram" class="social-icon-img">
+                </a>
+                <a href="https://discord.gg/uETydshJAV" target="_blank" class="social-icon discord">
+                    <img src="./assets/discord.png" alt="Discord" class="social-icon-img">
+                </a>
+                <a href="mailto:activemindsumanitoba@gmail.com" class="social-icon email">
+                    <img src="./assets/mail.png" alt="Email" class="social-icon-img">
+                </a>
+                <a href="https://linktr.ee/activemindsumanitoba" target="_blank" class="social-icon linktree">
+                    <img src="./assets/linktreee.png" alt="Linktree" class="social-icon-img">
+                </a>
+            </div>
+            <button id="join-us-button" class="join-us-button">Join Us</button>
+            <svg class="svg-container" viewBox="0 0 1440 320">
+                <path d="M0,64L30,69.3C60,75,120,85,180,85.3C240,85,300,75,360,74.7C420,75,480,85,540,106.7C600,128,660,160,720,181.3C780,203,840,213,900,213.3C960,213,1020,203,1080,181.3C1140,160,1200,128,1260,106.7C1320,85,1380,75,1410,69.3L1440,64L1440,320L0,320Z"></path>
+            </svg>
         </div>
-
-        <div class="social-icons">
-            <a href="https://t.me/+xaofJQ6xy4UxZjg5" target="_blank" class="social-icon telegram">
-                <img src="./assets/telegram.png" alt="Telegram" class="social-icon-img">
-            </a>
-            <a href="https://www.instagram.com/uofm_activeminds" target="_blank" class="social-icon instagram">
-                <img src="./assets/instagram.png" alt="Instagram" class="social-icon-img">
-            </a>
-            <a href="https://discord.gg/uETydshJAV" target="_blank" class="social-icon discord">
-                <img src="./assets/discord.png" alt="Discord" class="social-icon-img">
-            </a>
-            <a href="mailto:activemindsumanitoba@gmail.com" class="social-icon email">
-                <img src="./assets/mail.png" alt="Email" class="social-icon-img">
-            </a>
-            <a href="https://linktr.ee/activemindsumanitoba" target="_blank" class="social-icon linktree">
-                <img src="./assets/linktreee.png" alt="Linktree" class="social-icon-img">
-            </a>
-        </div>
-        <button id="join-us-button" class="join-us-button">Join Us</button>
-        <svg class="svg-container" viewBox="0 0 1440 320">
-            <path d="M0,64L30,69.3C60,75,120,85,180,85.3C240,85,300,75,360,74.7C420,75,480,85,540,106.7C600,128,660,160,720,181.3C780,203,840,213,900,213.3C960,213,1020,203,1080,181.3C1140,160,1200,128,1260,106.7C1320,85,1380,75,1410,69.3L1440,64L1440,320L0,320Z"></path>
-        </svg>
-    </div>
-    
-    <!-- Form Section -->
-    <div id="form-section">
-        <div class="form-content">
-            <span class="close-button" id="form-close">&times;</span>
-            <h2>Sign Up for Updates</h2>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfBhPOLetOCAQqzcGL0XlBIOmXIXNzACuxWdL2HSN7BkKzTVg/viewform?embedded=true" width="640" height="419" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        
+        <!-- Form Section -->
+        <div id="form-section">
+            <div class="form-content">
+                <span class="close-button" id="form-close">&times;</span>
+                <h2>Sign Up for Updates</h2>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfBhPOLetOCAQqzcGL0XlBIOmXIXNzACuxWdL2HSN7BkKzTVg/viewform?embedded=true" width="640" height="419" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
         </div>
     </div>
-
     
     
    
