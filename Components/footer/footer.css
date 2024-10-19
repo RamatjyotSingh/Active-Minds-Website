@@ -1,26 +1,46 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
-
+:root {
+  --font-family:  'Averia Serif Libre', serif;
+  --earls-green: #afb937;
+  --tamarind: #361f16;
+  --atoll: #0d4b7a;
+  --hippie-green: #5e8a4c;
+  --citron: #93a524;
+  --denim: #1387ba;
+  --downriver: #07243f;
+  --kabul: #5e4a3a;
+  --rich-gold: #9d5306;
+  --gulf-blue: #041c54;
+}
 footer {
-  background-color: #5e8a4c; /* Dark Green */
+  background-color: #4a6e3b; /* Darker Green */
   color: #ffffff;
-  padding: 40px 20px;
   text-align: center;
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  justify-content: space-around;
+
 }
 
 .footer__container {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  justify-content: space-around;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap:1rem;
   padding: 0 20px;
+  margin: 0 4rem;
 }
 
 .footer__logo img {
   width: 150px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
-
+.footer__nav h4{
+  margin-left:0.5rem
+}
 .footer__content {
   display: flex;
   justify-content: space-around;
@@ -30,7 +50,6 @@ footer {
 }
 
 .footer__nav, .footer__contact, .footer__social {
-  flex: 1;
   margin: 0 10px;
   min-width: 200px;
 }
@@ -81,15 +100,44 @@ footer {
   color: #91c9ff;
   transform: scale(1.2);
 }
-
+.footer__social .social-icons img{
+  height: 24px;
+}
 .footer__bottom {
   border-top: 1px solid #ffffff;
   padding-top: 10px;
   width: 100%;
   margin-top: 20px;
 }
-
-@media screen and (max-width: 768px) {
+.footer__nav {
+  width: fit-content;
+  text-align: left;
+}
+.contact-wrapper   {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  align-content: flex-start;
+  text-align: left;
+  margin-top:20px ;
+  gap:.5rem;
+}
+.footer__contact a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer__contact a:hover {
+  color: var(--atoll);
+  text-decoration: underline;
+}
+.footer__social {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+/* @media screen and (max-width: 768px) {
   .footer__content {
     flex-direction: column;
     align-items: center;
@@ -98,7 +146,25 @@ footer {
   .footer__nav, .footer__contact, .footer__social {
     margin-bottom: 20px;
   }
-}
+} */
+ @media screen and (max-width: 850px) {
+  .footer__logo {
+    width:100%;
+  }
+  .footer__container {
+    margin: 0 1rem;
+  }
+  .footer__nav, .footer__contact, .footer__social {
+    margin: 0;
+  }
+  
+
+  }
+  /* @media screen and (max-width: 650px) {
+    
+   
+  } */
+ 
 #insta {
   color: #E1306C; /* Instagram color */
   transition: color 0.3s, transform 0.3s;
