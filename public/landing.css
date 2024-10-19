@@ -2,7 +2,8 @@
     --font-family-style: "Averia Serif Libre", serif !important;
     --font-family2: 'Poppins', sans-serif;
     /* --font-family-style-Roboto: 'Roboto', sans-serif; */
-    --font-family-style-Roboto: var(var(--font-family-style));
+    --font-family-style-Roboto: var(--font-family-style);
+    --bg-color: #c7e4f3;
 }
 
 * {
@@ -10,7 +11,7 @@
 }
 
 body {
-    background-color: #c7e4f3; 
+    background-color: var(--bg-color); 
     margin: 0;
     padding: 0;
     font-family: var(--font-family-style);
