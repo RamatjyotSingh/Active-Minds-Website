@@ -20,6 +20,7 @@ footer {
   /* align-items: center; */
   flex-direction: column;
   justify-content: space-around;
+  padding: 2rem;
 
 }
 
@@ -147,7 +148,13 @@ footer {
     margin-bottom: 20px;
   }
 } */
- @media screen and (max-width: 850px) {
+ @media screen and (min-width: 940px) {
+  .footer__container{
+    margin: 4rem;
+  }
+  
+ }
+ @media screen and (max-width: 940px) {
   .footer__logo {
     width:100%;
   }
