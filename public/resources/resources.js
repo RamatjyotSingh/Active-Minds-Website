@@ -1,6 +1,5 @@
 const titles = Array.from(document.querySelectorAll(".resources"));
 const descriptions = Array.from(document.querySelectorAll(".description-text"));
-console.log(titles);
 titles.forEach((element) => {
     element.addEventListener("click",displayContext);
     

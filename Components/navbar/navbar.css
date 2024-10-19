@@ -1,5 +1,6 @@
 :root {
-    --font-family: 'Poppins', sans-serif, 'Averia Serif Libre', serif;
+    /* --font-family: 'Poppins', sans-serif, 'Averia Serif Libre', serif; */
+    --font-family: inherit;
     --earls-green: #afb937;
     --tamarind: #361f16;
     --atoll: #0d4b7a;
@@ -11,7 +12,7 @@
     --rich-gold: #9d5306;
     --gulf-blue: #041c54;
 }
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;

@@ -6,10 +6,11 @@
     --bg-img-width: max(40vw,40vh);
     --light-bg-color: #003550;
     --dark-bg-color: #072839;
+    --font-family: "Averia Serif Libre", serif;
 }
 
 * {
-    font-family: "Averia Serif Libre", serif;
+    font-family: var(--font-family);
     margin: 0;
     padding: 0;
     text-decoration: none;
