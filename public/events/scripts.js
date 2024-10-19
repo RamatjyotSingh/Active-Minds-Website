@@ -209,3 +209,21 @@ function updateBackgroundColor() {
 }
 updateBackgroundColor()
 window.addEventListener('scroll', updateBackgroundColor);
+
+document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (entry.target.classList.contains('typewriter')) {
+            entry.target.classList.add('animate-typewriter');
+          } else if (entry.target.classList.contains('fade-in-on-view')) {
+            entry.target.classList.add('animate-fade-in');
+          }
+          observer.unobserve(entry.target); // Stop observing once the animation is triggered
+        }
+      });
+    });
+
+    const targets = document.querySelectorAll('.typewriter, .fade-in-on-view');
+    targets.forEach(target => observer.observe(target));
+  });

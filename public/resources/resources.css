@@ -9,6 +9,7 @@
     --font-family: "Averia Serif Libre", serif;
     --off-white: #e3eef4;
     --nav-border-color: #e3eef49a;
+    scroll-behavior: smooth;
 }
 
 * {
@@ -53,9 +54,10 @@ body{
     overflow-y: visible;
     height: auto;
     padding-top: 15vh;
+    
     /* background-image: url(./assets/bg/blob.svg); */
-    animation: 20s bg-animate infinite alternate;
-    -webkit-animation: 20s bg-animate infinite alternate;
+    /* animation: 20s bg-animate infinite alternate;
+    -webkit-animation: 20s bg-animate infinite alternate; */
 }
 
 
@@ -105,7 +107,7 @@ h2 {
     max-width: min-content;
     height: fit-content;
     gap: var(--body-link-fs);
-    
+    animation: fade-in 1s ease-in-out;    
 }
 
 /* RESOURCES STYLING */
@@ -201,4 +203,16 @@ h2 {
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
+}
+
+
+@keyframes fade-in {
+  from {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

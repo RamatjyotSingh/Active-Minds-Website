@@ -6,6 +6,7 @@
     --bg-color: #c7e4f3;
     --title-fs: clamp(1.2rem,2.3rem,5vw);
     --title-line-height: 3rem;
+    scroll-behavior: smooth;
 }
 
 * {

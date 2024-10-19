@@ -7,9 +7,9 @@
   --color5: 57, 139, 124;  /* Teal */
   --color-interactive: 255, 255, 255; /* Pure White for interactive elements */
   --blob-color: 168, 230, 207; /* Mint Green */
-
   --circle-size: 80%;
   --blending: hard-light; 
+  scroll-behavior: smooth ;
 }
 
 
@@ -37,7 +37,7 @@
     height: var(--circle-size);
     top: calc(50% - var(--circle-size) / 2);
     left: calc(50% - var(--circle-size) / 2);
-
+    
     transform-origin: center center;
     /* animation: moveVertical 30s ease infinite; */
 
@@ -199,51 +199,65 @@ html{
 
   }
 .hero__content {
-    position: relative;
-    display: grid;
-    align-content: center;
-    padding:2rem;
-    z-index: 10;
-    
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem;
+  z-index: 10;
+  min-width: fit-content;
+  overflow: visible;
    
    
 }
+
+
 .hero__content h1 {
   font-size: clamp(48px, 10vw, 100px);
   color: #121515; /* Deep purple for stronger contrast */
   font-weight: 400; /* Bold for emphasis */
   letter-spacing: 0.02em;
-  overflow: hidden;
   line-height: 1.2;
   opacity: 0.9; /* Slightly transparent for a softer look */
   z-index: 2; /* Ensure it appears above any overlay */
   margin-bottom: 0.25rem; /* Add margin for spacing */
   border-right: 2px solid transparent; /* Create a typewriter effect */
+  overflow: hidden;
+  white-space: nowrap;
   max-width: fit-content;
-  animation: typewriter 3s steps(30) 1s 1 normal both, blink-caret 0.75s step-end 1s 7; /* Typewriter animation */
+  
 }
 
-
-
 .hero__content p {
-  font-family: 'Pacifico','transducer-variable', sans-serif;
+  transform: translateY(10px);
+  opacity: 0;
+  font-family: 'Pacifico', 'transducer-variable', sans-serif;
   font-size: clamp(16px, 2vw, 24px);
   color: #121515; /* Navy Gray for good contrast */
   line-height: 1.3; /* Increase line-height for better readability */
   z-index: 2; /* Ensure it appears above any overlay */
   margin-top: 0; /* Remove top margin */
   font-weight: 100;
- 
+}
+
+.animate-typewriter {
+  animation: typewriter 3s steps(30) 1s 1 normal both, blink-caret 0.75s step-end 1s 7; /* Typewriter animation */
 }
 
 
 .hero__image {
+  opacity: 0;
   position: relative;
   width: clamp(20em, 27vw, 30em);
   height: clamp(20em, 27vw, 30em);
   z-index: 10;
   aspect-ratio: 1;
-  animation: float 3s ease-in-out infinite;
+  animation: float 3s ease-in-out infinite, fade 2s 2.5s forwards;
+}
+@keyframes fade {
+  to{
+    opacity: 1;
+  }  
 }
 .hero__image img {
     position: relative;
@@ -317,7 +331,7 @@ html{
 }
 .event-list__item{
     cursor: pointer;
-    font-size: clamp(.75rem,2vw,1.25rem);
+    font-size: clamp(.9rem,2vw,1.25rem);
     font-weight: 500;
   }
 .event-list__item:hover, .event-list__item.active{
@@ -569,7 +583,7 @@ html{
     width: 100%;
     height:auto;
     padding: 2rem;
-   
+    animation-delay: .5s;
     aspect-ratio: 1/1;
   }
   
@@ -612,25 +626,50 @@ img{
   
 }
 
-
+@media prefers-reduced-motion {
+  .blob {
+    animation: none;
+  }
+  .hero__content h1 {
+    animation: none;
+  }
+  .hero__content p {
+    animation: none;
+  }
+  .hero__image {
+    animation: none;
+  }
+}
 
 
 /* Keyframes for typewriter and blink-caret */
 @keyframes typewriter {
   from {
-      width: 0;
+    width: 0; 
+    
   }
-  to {
-      width: 100%;
+  to { 
+    
+    width: 100%;
+   
   }
 }
 
 @keyframes blink-caret {
-  from,
-  to {
-      border-color: transparent;
+  from, to { border-color: transparent; }
+  50% { border-color: rgb(0, 0, 0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s linear forwards;
+}
+@keyframes fade-in {
+  from {
+    transform: translateY(15px);
+    opacity: 0;
   }
-  50% {
-      border-color: black;
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
