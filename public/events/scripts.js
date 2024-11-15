@@ -20,7 +20,8 @@ function createEventCard(event) {
                 <h3 class="card__type">${event.type}</h3>
                 <h2 class="card__title">${event.title}</h2>
                 <p class="card__date">${event.date}</p>
-                <p class="card__body card__body--truncated">${event.description}</p>`;
+                <div class="card__body card__body--truncated">${event.description}</div
+                >`;
                 if(event.externalLink){
                     innerHTML+=` <div class="card__read-more">Read more</div>`;
                 }
@@ -38,17 +39,17 @@ function categorizeEvents(events) {
         all: [],
         upcomingEvents: [],
         pastEvents: [],
-        archives: [],
-        toolsTips: [],
+        campaigns: [],
+        campaigns: [],
         newsletters: []
     };
 
     Object.values(events).forEach(event => {
         const eventDate = new Date(event.date);
-        if (event.type === "archive") {
-            categories.archives.push(event);
-        } else if (event.type === "tools-n-tips") {
-            categories.toolsTips.push(event);
+        if (event.type === "campaigns") {
+            categories.campaigns.push(event);
+        } else if (event.type === "campaigns") {
+            categories.campaigns.push(event);
         } else if (event.type === "newsletter") {
             categories.newsletters.push(event);
         } else if (eventDate >= today) {
@@ -109,8 +110,8 @@ function initializeEventHandling(eventList) {
         'all-events': categorizedEvents.all,
         'upcoming-events': categorizedEvents.upcomingEvents,
         'past-events': categorizedEvents.pastEvents,
-        'archives': categorizedEvents.archives,
-        'tools-n-tips': categorizedEvents.toolsTips,
+        'campaigns': categorizedEvents.campaigns,
+        'campaigns': categorizedEvents.campaigns,
         'newsletter': categorizedEvents.newsletters
     };
 
@@ -140,8 +141,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const itemMap = {
                 'event': date >= today ? 'upcoming-events' : 'past-events',
                 'newsletter': 'newsletter',
-                'archive': 'archives',
-                'tools-n-tips': 'tools-n-tips'
+                'campaigns': 'campaigns',
+                'campaigns': 'campaigns'
             };
 
             const targetItem = document.querySelector('.event-list__item[data-container="' + itemMap[type] + '"]');

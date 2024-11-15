@@ -279,7 +279,7 @@ img {
     white-space: nowrap;
     border-right:  solid transparent;
     max-width: fit-content;
-    animation: typewriter 6s steps(25) 1s 1 normal both, blink-caret .75s step-end 1s 7; /* Typewriter animation */
+    animation: typewriter 4s steps(30) 1s 1 normal both, blink-caret .75s step-end 1s 7; /* Typewriter animation */
   }
     
   @media  screen and (max-width: 450px){
