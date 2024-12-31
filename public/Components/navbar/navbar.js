@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     navbarContainer.innerHTML = `
         <div class="navbar">
             <div class="navbar__logo">
-                <img src="../public/club Assets/activeMindsLogo.png" alt="logo"> 
+                <img src="../public/club Assets/activeMindLogoOutlined.png" alt="logo"> 
             </div>
             <div class="menu-container">
                 <div id="menu-bar">
