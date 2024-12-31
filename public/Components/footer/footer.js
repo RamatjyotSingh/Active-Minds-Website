@@ -22,8 +22,7 @@ const footer=`
                 <div class="contact-wrapper">
                     <div class="footer__contact">
                         <h4>Contact Us</h4>
-                        <a href="mailto:info@activeminds.com">Email: info@activeminds.com</a>
-                        <p>Phone: (123) 456-7890</p>
+                        <a href="mailto:activemindsumanitoba@gmail.com">Email: activemindsumanitoba@gmail.com</a>
                     </div>
                     <div class="footer__social">
                         <h4>Follow Us</h4>
@@ -31,7 +30,7 @@ const footer=`
                             <a href="#"><i  id ="insta"><img src="../extra assets/instagram.png" alt=""></i></a>
                             <a href="#"><i  id ="discord"><img src="../extra assets/discord.png" alt=""></i></a>
                             <a href="#"><i  id ="telegram"><img src="../extra assets/telegram.png" alt=""></i></a>
-                            <a href="#"><i  id ="linkedin"><img src="../extra assets/linkedin.png" alt=""></i></a>
+                            <a href="#"><i  id ="linktree"><img src="../extra assets/linktree.png" alt=""></i></a>
 
                         </div>
                     </div>
