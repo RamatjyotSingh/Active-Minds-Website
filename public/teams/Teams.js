@@ -47,7 +47,7 @@ function fillColumns(columns,items){
 
 function createGrid(){
     createColumns(numCols);
-    shuffleGridItems();
+    // shuffleGridItems();
     fillColumns(columns,gridItems);
 }
 
