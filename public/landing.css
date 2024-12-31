@@ -790,6 +790,7 @@ h2 {
       max-width: 90%;
       margin: 0 auto 20px;
       transform: none;
+      opacity: 0.24;
     }
   
     .about-title {
