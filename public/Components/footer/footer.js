@@ -3,7 +3,7 @@ const footer=`
         <div class="footer__container">
            
                 <div class="footer__logo">
-                    <img src="../public/assets/active minds.webp" alt="logo">
+                    <img src="../public/assets/activeMindLogoOutlined.png" alt="logo">
                 </div>
               
                 
