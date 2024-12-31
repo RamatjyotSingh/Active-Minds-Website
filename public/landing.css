@@ -562,12 +562,14 @@ h2 {
     transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     margin-top: 20px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
 }
 
 .join-us-button:hover {
     background: black;
     color: white;
     transform: scale(1.05);
+    text-decoration: none;
 }
 
 /* Form Section Styles */
@@ -652,7 +654,10 @@ h2 {
 @media (max-width: 768px) {
     .contact-title { font-size: 2rem; }
     .contact-subtitle { font-size: 1rem; }
-    .join-us-button { font-size: 16px; padding: 8px 16px; }
+    .join-us-button { 
+        font-size: 16px; padding: 8px 16px; 
+        text-decoration: none;
+    }
     .social-icon {
         width: 60px;
         height: 60px;
@@ -819,6 +824,7 @@ h2 {
     .join-us-button {
       font-size: 16px;
       padding: 8px 16px;
+      text-decoration: none;
     }
   }
 
