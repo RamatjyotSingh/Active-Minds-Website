@@ -5,6 +5,8 @@
     --font-family-style-Roboto: var(--font-family-style);
     --bg-color: #c7e4f3;
     --title-fs: clamp(1.2rem,2.3rem,5vw);
+    --sub-title-fs: clamp(0.2rem,1.3rem,3.5vw);
+    --main-title-fs: min(43px,10vw);
     --title-line-height: 3rem;
 }
 
@@ -204,6 +206,17 @@ header {
         -1px 1px 0 #000; /* Black shadow to the top-right */
 }
 
+/* @ University of Manitoba Styling */
+
+#title-subscript {
+    text-align: right;
+    opacity: 0.44;
+    margin-top: -1.7vw;
+    margin-bottom: 0.4rem;
+    font-style: italic;
+    font-size: var(--sub-title-fs);
+}
+
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     body {
@@ -350,7 +363,7 @@ h1 {
     text-align: center;
     font-weight: 950; 
     margin: 0;
-    margin-bottom: 5px; 
+    margin-bottom: 5px;
     
 }
 
@@ -392,6 +405,7 @@ h2 {
 
 .sub-heading {
     margin-left: 250px;
+    text-align: right;
 }
 
 /* About Section */
@@ -725,14 +739,16 @@ h2 {
     }
   
     h1 {
-      font-size: 50px;
+      /* font-size: 50px; */
+      font-size: var(--main-title-fs);
     }
   
     h2 {
-      font-size: 20px;
+      font-size: var(--sub-title-fs);
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      text-align: center;
     }
 }
 
@@ -781,6 +797,7 @@ h2 {
   
     .sub-heading {
       margin-left: 0;
+      font-size: var(--sub-title-fs);
     }
   }
 
