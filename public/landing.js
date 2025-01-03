@@ -225,9 +225,9 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('form-section').style.display = 'flex'; // Show the form
     });
 
-    document.getElementById('form-close').addEventListener('click', function() {
-        document.getElementById('form-section').style.display = 'none'; // Hide the form
-    });
+    // document.getElementById('form-close').addEventListener('click', function() {
+    //     document.getElementById('form-section').style.display = 'none'; // Hide the form
+    // });
 
     document.addEventListener('DOMContentLoaded', () => {
         const activeText = document.querySelector('.active-text');
