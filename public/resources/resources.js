@@ -1,3 +1,4 @@
+
 const titles = Array.from(document.querySelectorAll(".resources"));
 const descriptions = Array.from(document.querySelectorAll(".description-text"));
 titles.forEach((element) => {
@@ -43,3 +44,4 @@ function updateBackgroundColor() {
     document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 }
 window.addEventListener('scroll', updateBackgroundColor);
+
