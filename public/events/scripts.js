@@ -39,17 +39,17 @@ function categorizeEvents(events) {
         all: [],
         upcomingEvents: [],
         pastEvents: [],
-        campaigns: [],
-        campaigns: [],
+        initiatives: [],
+        giveaways: [],
         newsletters: []
     };
 
     Object.values(events).forEach(event => {
         const eventDate = new Date(event.date);
-        if (event.type === "campaigns") {
-            categories.campaigns.push(event);
-        } else if (event.type === "campaigns") {
-            categories.campaigns.push(event);
+        if (event.type === "initiatives") {
+            categories.initiatives.push(event);
+        } else if (event.type === "giveaways") {
+            categories.giveaways.push(event);
         } else if (event.type === "newsletter") {
             categories.newsletters.push(event);
         } else if (eventDate >= today) {
@@ -68,6 +68,9 @@ function insertEvents(events, containerId) {
     const container = document.getElementById(containerId);
     if (container && container.classList.contains('active')) {
         container.innerHTML = ''; // Clear existing content
+        if (events.length === 0) {
+            container.innerHTML = '<p class="no-events" style="color: var(--tamarind); font-size: clamp(1rem,2vw,2rem); text-align: center; margin: 20px 0; padding: 2rem; border-radius: 5px;  justify-self: center; align-self: center; grid-column: 1 / -1;">No events to show. Maybe the aliens took them!</p>';
+        }
         events.forEach(event => {
             container.innerHTML += createEventCard(event);
         });
@@ -110,9 +113,10 @@ function initializeEventHandling(eventList) {
         'all-events': categorizedEvents.all,
         'upcoming-events': categorizedEvents.upcomingEvents,
         'past-events': categorizedEvents.pastEvents,
-        'campaigns': categorizedEvents.campaigns,
-        'campaigns': categorizedEvents.campaigns,
-        'newsletter': categorizedEvents.newsletters
+        'initiatives': categorizedEvents.initiatives,
+        'initiatives': categorizedEvents.initiatives,
+        'newsletter': categorizedEvents.newsletters,
+        'giveaways': categorizedEvents.giveaways
     };
 
     // Insert events into the containers initially
@@ -141,8 +145,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const itemMap = {
                 'event': date >= today ? 'upcoming-events' : 'past-events',
                 'newsletter': 'newsletter',
-                'campaigns': 'campaigns',
-                'campaigns': 'campaigns'
+                'initiatives': 'initiatives',
+                'giveaways': 'giveaways'
             };
 
             const targetItem = document.querySelector('.event-list__item[data-container="' + itemMap[type] + '"]');

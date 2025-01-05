@@ -65,7 +65,7 @@ const eventList = {
                         <p>Winners will be drawn randomly and contacted via this account only.</p>
                         <p>Make your Reading Week extra special! Good luck, and don’t forget to tag and share! 🎉</p>`
                         ,
-        type: 'campaigns',
+        type: 'giveaways',
         externalLink: 'https://www.instagram.com/p/DCPTYvMPeYl/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
     },
     event4: {
@@ -76,7 +76,7 @@ const eventList = {
                         <p>As the month comes to an end, let’s remember that LGBT+ history is a journey of resilience, courage, and love.</p>
                         <p>While LGBT+ History Month might be ending, our commitment to honoring these voices and stories continues every day. Let’s keep pushing forward with love and support for the LGBT+ community, today and always.</p>
                         <p>Stay proud. Stay strong. 💖</p>`,
-        type: 'campaigns',
+        type: 'initiatives',
         externalLink: 'https://www.instagram.com/p/DB1eoAqP4hU/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
     },
     event5: {
@@ -88,7 +88,7 @@ const eventList = {
                     <p>We reaffirm our commitment to advocating for reinforced security measures and acknowledging the voices of survivors to foster a safer and supportive environment for everyone. We encourage vigilance, mutual support, and remind everyone to lean on available resources in our community.</p>
                     <p>No one has to navigate this alone. Together, let’s uphold a campus where respect and safety are paramount.</p>
                     `,
-        type: 'campaigns',
+        type: 'initiatives',
         externalLink: 'https://www.instagram.com/p/DBraUzmSF6Y/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
     },
     event6: {
@@ -108,7 +108,7 @@ const eventList = {
                     <p>Starting as a tribute to DEA agent Enrique Camarena, who was tragically killed in the line of duty, the movement has grown to symbolize our collective commitment to building a healthier, safer community.</p>
                     <p>Learn more about how substance use affects Canadians and the importance of prevention through this resource: <a href="https://www.addictionhelp.com/addiction/canadian-statistics/" target="_blank">Addiction Help - Canadian Statistics</a>.</p>
                 `,
-        type: 'campaigns',
+        type: 'initiatives',
         externalLink: 'https://www.instagram.com/p/DBhhEsZysiq/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
     },
     event8: {
@@ -122,7 +122,7 @@ const eventList = {
                     
                     `,
 
-        type: 'campaigns',
+        type: 'initiatives',
         externalLink: 'template2.html?event=event8'
     },
     event9: {
@@ -134,7 +134,7 @@ const eventList = {
                         <p>As a reminder, please be kind to yourself as well as the people around you. 🌸</p>
                         <p>Let’s spread love and awareness together. 💖</p>
                         `,
-        type: 'campaigns',
+        type: 'initiatives',
         externalLink: 'https://www.instagram.com/p/DAoKRyguqq4/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
     },
     event10: {
@@ -150,7 +150,7 @@ const eventList = {
     //     img: 'https://plus.unsplash.com/premium_photo-1721257104603-b6b48b7ff239?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8',
     //     title: 'Independence Day 2021',
     //     description: 'Celebrating freedom, liberty, and the spirit of independence!',
-    //     type: 'campaigns',
+    //     type: 'initiatives',
     //     externalLink: 'template2.html?event=event11'
     // },
     // event12: {
@@ -158,7 +158,7 @@ const eventList = {
     //     img: 'https://images.unsplash.com/photo-1721297015609-1374b1378d31?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8',
     //     title: 'Christmas Day 2021',
     //     description: 'May your Christmas be filled with joy, laughter, and warm memories.',
-    //     type: 'campaigns',
+    //     type: 'initiatives',
     //     externalLink: 'template2.html?event=event12'
     // },
     // event13: {
