@@ -3,7 +3,7 @@ const footer=`
         <div class="footer__container">
            
                 <div class="footer__logo">
-                    <img src="../public/assets/activeMindLogoOutlined.png" alt="logo">
+                    <img src="assets/activeMindLogoOutlined.png" alt="logo">
                 </div>
               
                 
@@ -12,10 +12,10 @@ const footer=`
                 <div class="footer__nav">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="../public/index.html"> - Back to Homepage.</a></li>
-                        <li><a href="../public/events.html">- Upcoming events and workshops.</a> </li>
-                        <li><a href="../public/teams.html">- Meet our dedicated team.</a> </li>
-                        <li><a href="../public/resources.html">- Explore helpful resources.</a> </li>
+                        <li><a href="index.html"> - Back to Homepage.</a></li>
+                        <li><a href="events.html">- Upcoming events and workshops.</a> </li>
+                        <li><a href="teams.html">- Meet our dedicated team.</a> </li>
+                        <li><a href="resources.html">- Explore helpful resources.</a> </li>
                     </ul>
                     
                 </div>
@@ -27,10 +27,10 @@ const footer=`
                     <div class="footer__social">
                         <h4>Follow Us</h4>
                         <div class="social-icons">
-                            <a href="#"><i  id ="insta"><img src="../extra assets/instagram.png" alt=""></i></a>
-                            <a href="#"><i  id ="discord"><img src="../extra assets/discord.png" alt=""></i></a>
-                            <a href="#"><i  id ="telegram"><img src="../extra assets/telegram.png" alt=""></i></a>
-                            <a href="#"><i  id ="linktree"><img src="../extra assets/linktree.png" alt=""></i></a>
+                            <a href="#"><i  id ="insta"> <img src="assets/instagram.png" alt=""></i></a>
+                            <a href="#"><i  id ="discord"> <img src="assets/discord.png" alt=""></i></a>
+                            <a href="#"><i  id ="telegram"> <img src="assets/telegram.png" alt=""></i></a>
+                            <a href="#"><i  id ="linktree"> <img src="assets/linktree.png" alt=""></i></a>
 
                         </div>
                     </div>
