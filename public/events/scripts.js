@@ -52,7 +52,8 @@ function categorizeEvents(events) {
             categories.giveaways.push(event);
         } else if (event.type === "newsletter") {
             categories.newsletters.push(event);
-        } else if (eventDate >= today) {
+        } 
+        if (eventDate >= today) {
             categories.upcomingEvents.push(event);
         } else {
             categories.pastEvents.push(event);
