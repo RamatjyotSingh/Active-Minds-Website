@@ -1,0 +1,38 @@
+{
+  "name": "active-minds-website",
+  "version": "1.0.0",
+  "description": "Official website of Active Minds At Univeristy of Manitoba",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Krish-Bhalala/Active-Minds-Website.git"
+  },
+  "keywords": [
+    "website",
+    "active",
+    "minds",
+    "mental",
+    "health",
+    "university",
+    "uofm",
+    "university",
+    "of",
+    "manitoba",
+    "umantioba",
+    "activeminds-umanitoba"
+  ],
+  "author": "Ramatjyot Singh, Krish Bhalala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Krish-Bhalala/Active-Minds-Website/issues"
+  },
+  "homepage": "https://github.com/Krish-Bhalala/Active-Minds-Website#readme",
+  "devDependencies": {
+    "vite": "^6.0.7"
+  }
+}
