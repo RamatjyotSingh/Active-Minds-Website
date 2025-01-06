@@ -7,7 +7,6 @@ Official website of Active Minds at the University of Manitoba.
 - [Introduction](#introduction)
 - [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Contributing](#contributing)
 
 ## Introduction
