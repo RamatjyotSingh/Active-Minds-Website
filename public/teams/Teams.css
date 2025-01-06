@@ -21,10 +21,13 @@
     --dark-bg-color: #072839;
     --title-font-color: rgb(230, 229, 236);
     --font-family: "Averia Serif Libre", serif !important;
+    font-family: var(--font-family);
     scroll-behavior: smooth;
 
     --navbar-hover-color:#3c65a2be !important; 
 }
+
+
 
 * {
     margin: 0;
