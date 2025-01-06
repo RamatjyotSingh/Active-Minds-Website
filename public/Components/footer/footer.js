@@ -27,11 +27,10 @@ const footer=`
                     <div class="footer__social">
                         <h4>Follow Us</h4>
                         <div class="social-icons">
-                            <a href="#"><i  id ="insta"> <img src="assets/instagram.png" alt=""></i></a>
-                            <a href="#"><i  id ="discord"> <img src="assets/discord.png" alt=""></i></a>
-                            <a href="#"><i  id ="telegram"> <img src="assets/telegram.png" alt=""></i></a>
-                            <a href="#"><i  id ="linktree"> <img src="assets/linktree.png" alt=""></i></a>
-
+                            <a href="https://www.instagram.com/uofm_activeminds" target="_blank"><i id="insta"> <img src="assets/instagram.png" alt=""></i></a>
+                            <a href="https://discord.gg/uETydshJAV" target="_blank"><i id="discord"> <img src="assets/discord.png" alt=""></i></a>
+                            <a href="https://t.me/+xaofJQ6xy4UxZjg5" target="_blank"><i id="telegram"> <img src="assets/telegram.png" alt=""></i></a>
+                            <a href="https://linktr.ee/activemindsumanitoba" target="_blank"><i id="linktree"> <img src="assets/linktree.png" alt=""></i></a>
                         </div>
                     </div>
                 </div>
