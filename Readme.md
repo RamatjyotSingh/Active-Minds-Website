@@ -31,11 +31,31 @@ To get a local copy up and running, follow these steps:
    git clone https://github.com/Krish-Bhalala/Active-Minds-Website.git
    ```
 
-Navigate to the project directory:
+2. Navigate to the project directory:
 
-```sh
-cd Active-Minds-Website
-```
+   ```sh
+   cd Active-Minds-Website
+   ```
+
+3. Install dependencies:
+
+   ```sh
+   npm install
+   ```
+
+4. Build the project:
+
+   ```sh
+   npm run build
+   ```
+
+   The build configuration is located in `vite.config.js`.
+
+5. Serve the website:
+
+   ```sh
+   npm run serve
+   ```
 
 ## Contributing
 
