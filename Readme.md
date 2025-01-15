@@ -1,6 +1,7 @@
 # Active Minds Website
 
 Official website of Active Minds at the University of Manitoba.
+The site is Live at [activeminds-umanitoba.org](https://activeminds-umanitoba.org/)
 
 ## Table of Contents
 
