@@ -1,3 +1,5 @@
+import { teamMembers } from './data.js';
+
 const windowWidth = window.innerWidth;
 const grid = document.querySelector(".grid");
 let gridItems = Array.from(document.querySelectorAll(".grid-item"));
@@ -51,8 +53,6 @@ function createGrid(){
     fillColumns(columns,gridItems);
 }
 
-createGrid();
-
 function updateBackgroundColor() {
     const scrollPosition = window.scrollY;
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -69,3 +69,55 @@ function updateBackgroundColor() {
     document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 }
 window.addEventListener('scroll', updateBackgroundColor);
+
+
+//CREATING NAME CARDS
+function createTeamMemberCard(member) {
+    const gridItem = document.createElement('div');
+    gridItem.className = 'grid-item';
+  
+    gridItem.innerHTML = `
+      <img src="${member.image}"/>
+      <div class="content">
+        <p class="title">${member.title}</p>
+        <p class="name">${member.name}</p>
+        <p class="description">${member.description}</p>
+        <div class="links">
+          ${createSocialLinks(member.socialLinks)}
+        </div>
+      </div>
+    `;
+  
+    return gridItem;
+  }
+  
+  function createSocialLinks(links) {
+    const socialIcons = {
+      linkedin: 'teams/images/linkedin.svg',
+      github: 'teams/images/github.png',
+      instagram: 'teams/images/insta.svg',
+      email: 'teams/images/email.svg'
+    };
+  
+    return Object.entries(links)
+      .map(([platform, url]) => `
+        <a href="${url}"><img src="${socialIcons[platform]}" alt="${platform}"></a>
+      `)
+      .join('');
+  }
+  
+  
+  // Function to create and append all team member cards
+  function createTeamCards() {
+    const container = document.getElementById('team-container'); // Assume you have a container element
+    console.log(container);
+    teamMembers.forEach(member => {
+      const card = createTeamMemberCard(member);
+      container.appendChild(card);
+    });
+  }
+  
+  // Call this function when the page loads
+  createTeamCards();
+  createGrid();
+  
