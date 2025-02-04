@@ -1,11 +1,11 @@
-import { teamMembers } from './data.js';
-
 const windowWidth = window.innerWidth;
 const grid = document.querySelector(".grid");
 let gridItems = Array.from(document.querySelectorAll(".grid-item"));
 let numCols = 3;
 let columns = [];
 let currentMode = "large";
+const BIG_SCREEN_MIN_WIDTH = 600;
+
 
 
 function shuffleGridItems() {
@@ -28,7 +28,16 @@ function deepCopyDivArray(originalArray) {
 
 function createColumns(numCols){
     grid.innerHTML = "";
-    for(let i=0;i<numCols;i++){
+    if(windowWidth >= BIG_SCREEN_MIN_WIDTH){
+        //3 columns mason
+        for(let i=0;i<numCols;i++){
+            col = document.createElement("div");
+            col.classList.add("cols");
+            grid.appendChild(col);
+            columns.push(col);
+        }
+    }else{
+        //1 column
         col = document.createElement("div");
         col.classList.add("cols");
         grid.appendChild(col);
@@ -38,12 +47,21 @@ function createColumns(numCols){
 
 function fillColumns(columns,items){
     let currColumn = 0;
-    for(let i=0; i<items.length; i++){
-        if(currColumn >= columns.length){
-            currColumn = 0;
+    if(windowWidth >= BIG_SCREEN_MIN_WIDTH){
+        for(let i=0; i<items.length; i++){
+            if(currColumn >= columns.length){
+                currColumn = 0;
+            }
+            columns[currColumn].appendChild(items[i]);
+            currColumn++;
         }
-        columns[currColumn].appendChild(items[i]);
-        currColumn++;
+    }else{
+        for(let i=0; i<items.length; i++){
+            if(currColumn >= columns.length){
+                currColumn = 0;
+            }
+            columns[currColumn].appendChild(items[i]);
+        }
     }
 }
 
@@ -52,6 +70,8 @@ function createGrid(){
     // shuffleGridItems();
     fillColumns(columns,gridItems);
 }
+
+createGrid();
 
 function updateBackgroundColor() {
     const scrollPosition = window.scrollY;
@@ -69,55 +89,3 @@ function updateBackgroundColor() {
     document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 }
 window.addEventListener('scroll', updateBackgroundColor);
-
-
-//CREATING NAME CARDS
-function createTeamMemberCard(member) {
-    const gridItem = document.createElement('div');
-    gridItem.className = 'grid-item';
-  
-    gridItem.innerHTML = `
-      <img src="${member.image}"/>
-      <div class="content">
-        <p class="title">${member.title}</p>
-        <p class="name">${member.name}</p>
-        <p class="description">${member.description}</p>
-        <div class="links">
-          ${createSocialLinks(member.socialLinks)}
-        </div>
-      </div>
-    `;
-  
-    return gridItem;
-  }
-  
-  function createSocialLinks(links) {
-    const socialIcons = {
-      linkedin: 'teams/images/linkedin.svg',
-      github: 'teams/images/github.png',
-      instagram: 'teams/images/insta.svg',
-      email: 'teams/images/email.svg'
-    };
-  
-    return Object.entries(links)
-      .map(([platform, url]) => `
-        <a href="${url}"><img src="${socialIcons[platform]}" alt="${platform}"></a>
-      `)
-      .join('');
-  }
-  
-  
-  // Function to create and append all team member cards
-  function createTeamCards() {
-    const container = document.getElementById('team-container'); // Assume you have a container element
-    console.log(container);
-    teamMembers.forEach(member => {
-      const card = createTeamMemberCard(member);
-      container.appendChild(card);
-    });
-  }
-  
-  // Call this function when the page loads
-  createTeamCards();
-  createGrid();
-  
