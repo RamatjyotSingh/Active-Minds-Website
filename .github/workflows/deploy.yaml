@@ -25,11 +25,10 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     # Step 3: Build and push Docker image
-    - name: Set up private key
+    - name: Build and push Docker image
       run: |
-        echo "${{ secrets.ACTIVE_MINDS_EC2_PRIVATE_KEY }}" > private_key.pem
-        chmod 400 private_key.pem
-
+        docker build -t ramatjyotsingh/active-minds-website .
+        docker push  ramatjyotsingh/active-minds-website
 
     # Step 4: SSH into EC2 and deploy
     - name: Deploy to EC2
@@ -37,7 +36,7 @@ jobs:
       with:
         host: ${{ secrets.ACTIVE_MINDS_EC2_HOST }}
         username: ubuntu
-        key_path: private_key.pem
+        key: ${{ secrets.ACTIVE_MINDS_EC2_PRIVATE_KEY }}
         script: |
           docker pull ramatjyotsingh/active-minds-website
           docker stop website || true
