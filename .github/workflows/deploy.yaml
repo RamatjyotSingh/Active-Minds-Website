@@ -28,10 +28,9 @@ jobs:
     - name: Build and push Docker image
       env:
         CI: false
-        NODE_ENV: production
       run: |
-        docker build -t ramatjyotsingh/active-minds-website . 2>/dev/null
-        docker push ramatjyotsingh/active-minds-website
+        docker build -t ramatjyotsingh/active-minds-website .
+        docker push  ramatjyotsingh/active-minds-website
 
     # Step 4: SSH into EC2 and deploy
     - name: Deploy to EC2
