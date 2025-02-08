@@ -1,7 +1,6 @@
 :root {
     --font-family-style: "Averia Serif Libre", serif !important;
     --font-family2: 'Poppins', sans-serif;
-    /* --font-family-style-Roboto: 'Roboto', sans-serif; */
     --font-family-style-Roboto: var(--font-family-style);
     --bg-color: #c7e4f3;
     --title-fs: clamp(1.2rem,2.3rem,5vw);
