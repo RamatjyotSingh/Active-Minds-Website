@@ -1,0 +1,7 @@
+server { listen 80; server_name umatt.org www.activeminds-umanitoba.org;
+
+root /home/ubuntu/website/dist; index index.html;
+
+location / { try_files $uri $uri/ /index.html; }
+
+access_log /var/log/nginx/uactiveminds-umanitoba.org.access.log; error_log /var/log/nginx/activeminds-umanitoba.org.error.log; }
