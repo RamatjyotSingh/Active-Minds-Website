@@ -26,8 +26,6 @@ jobs:
 
     # Step 3: Build and push Docker image
     - name: Build and push Docker image
-      env:
-        CI: false
       run: |
         docker build -t ramatjyotsingh/active-minds-website .
         docker push  ramatjyotsingh/active-minds-website
