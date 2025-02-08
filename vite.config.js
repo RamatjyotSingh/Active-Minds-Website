@@ -9,7 +9,7 @@ export default defineConfig({
             main: './public/index.html',  // Main entry point
             events: './public/events.html',  // Events page
             resources: './public/resources.html', // Resources page
-            teams: './public/Teams.html',  // Teams page
+            teams: './public/teams.html',  // Teams page
           },
     },
   },
