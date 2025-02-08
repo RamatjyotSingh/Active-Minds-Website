@@ -185,5 +185,33 @@ const eventList = {
         description: `Join us for an evening of fun with food, engaging conversations, and exciting trivia! Test your knowledge and win fantastic prizes!`,
         type: 'event',
         externalLink: 'https://www.instagram.com/p/DBIQrH9gjM0/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
+    },
+    event16: {
+        date: '2025-01-30',
+        img: './events/assets/inside-popdcast-2.jpg', // Update with the correct image path
+        alt: 'Image representing Active Minds radio show',
+        title: 'Inside the Active Mindset: Mental Health Radio Show',
+        description: `Join Active Minds at the University of Manitoba for a brand-new radio show dedicated to mental and holistic health! Tune in to Radio Channel 101.5 UMFM on January 30th from 10:00 AM to 10:30 AM. This week’s special guests include Gurpahul and Pauline, the Club President and VP. Each week, we’ll dive into meaningful conversations, break down stigma, and welcome inspiring guests to discuss well-being. Don’t miss out!`,
+        type: 'initiatives',
+        externalLink: 'https://www.instagram.com/p/DFbum30uV2h/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==' // Update with the correct link if available
+    },
+   
+    event17: {
+        date: '2025-01-24',
+        img: './events/assets/men-health-podacst.jpg',
+        alt: 'Redefining Men’s Mental Health',
+        title: 'Strengthening Vulnerability – Redefining Men’s Mental Health',
+        description: `Join us for an insightful session on Men’s Mental Health with Vaibhav Varma, President of the Men’s Wellness Circle at UM. Tune in to Radio Channel 101.5 UMEM on February 6th at 10:00 AM for a special conversation hosted by Neha Saru Macabr. Embrace vulnerability as a strength and help break the stigma surrounding men’s mental health. Follow us on social media @udm_activeminds and @menswellnessum for updates.`,
+        type: 'initiatives',
+        externalLink: 'https://www.instagram.com/p/DFtwLVlM-sa/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
+    },
+    event18: {
+        date: '2025-01-24',
+        img: './events/assets/polards.jpg', // Update with the correct image path
+        alt: 'Polaroids for Positivity event image',
+        title: 'Polaroids for Positivity: Bell Let’s Talk Day',
+        description: `Join us on January 24th from 11:00 AM to 2:00 PM for a special event in support of Bell Let’s Talk Day! Enjoy different freebies and FREE Polaroid photos while supplies last. Location: First Floor, Fletcher Argue, opposite the Faculty of Arts Advising. Let’s spread positivity and support mental health together!`,
+        type: 'event',
+        externalLink: 'https://www.instagram.com/p/DFMbBH2M-BO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==' // Update with the correct link if available
     }
 };
