@@ -39,15 +39,15 @@ function categorizeEvents(events) {
         all: [],
         upcomingEvents: [],
         pastEvents: [],
-        initiatives: [],
+        event: [],
         giveaways: [],
         newsletters: []
     };
 
     Object.values(events).forEach(event => {
         const eventDate = new Date(event.date);
-        if (event.type === "initiatives") {
-            categories.initiatives.push(event);
+        if (event.type === "event") {
+            categories.event.push(event);
         } else if (event.type === "giveaways") {
             categories.giveaways.push(event);
         } else if (event.type === "newsletter") {
@@ -114,8 +114,8 @@ function initializeEventHandling(eventList) {
         'all-events': categorizedEvents.all,
         'upcoming-events': categorizedEvents.upcomingEvents,
         'past-events': categorizedEvents.pastEvents,
-        'initiatives': categorizedEvents.initiatives,
-        'initiatives': categorizedEvents.initiatives,
+        'event': categorizedEvents.event,
+        'event': categorizedEvents.event,
         'newsletter': categorizedEvents.newsletters,
         'giveaways': categorizedEvents.giveaways
     };
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const itemMap = {
                 'event': date >= today ? 'upcoming-events' : 'past-events',
                 'newsletter': 'newsletter',
-                'initiatives': 'initiatives',
+                'event': 'event',
                 'giveaways': 'giveaways'
             };
 
