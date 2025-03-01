@@ -42,7 +42,7 @@ const eventList = {
                       Here’s an activity put forward by the Academic Learning Centre to help assess how time is spent during the week. 
                       Try the "168 Hour Week Activity" to plan and manage your time effectively.`,
         type: 'newsletter',
-        externalLink: 'https://www.instagram.com/p/DCSZRdHzWrb/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
+        externalLink: './events/newsletters/168-Hour-Week.pdf'
     },
     event3: {
         date: '2024-11-13',
@@ -118,7 +118,7 @@ const eventList = {
         title: 'Mental Health Research Represented by the Faces of Psychology',
         description: 'Sometimes, stepping away is perfectly fine! Take a break from social media if you feel overwhelmed.',
         type: 'newsletter',
-        externalLink: 'ActiveMinds_MentalHealthNewsletter_September2022_MathewsN.pdf'
+        externalLink: './events/newsletters/ActiveMinds_MentalHealthNewsletter_September2022_MathewsN.pdf'
     },
     event15: {
         date: '2024-10-21',
@@ -156,5 +156,13 @@ const eventList = {
         description: `Join us on January 24th from 11:00 AM to 2:00 PM for a special event in support of Bell Let’s Talk Day! Enjoy different freebies and FREE Polaroid photos while supplies last. Location: First Floor, Fletcher Argue, opposite the Faculty of Arts Advising. Let’s spread positivity and support mental health together!`,
         type: 'event',
         externalLink: 'https://www.instagram.com/p/DFMbBH2M-BO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==' // Update with the correct link if available
-    }
+    },
+    event19: {
+        date: '2022-10-02',
+        img: './events/newsletters/feb-newsletter-img.jpg',
+        title: 'Mental Health Research Represented by the Faces of Psychology',
+        description: 'Sometimes, stepping away is perfectly fine! Take a break from social media if you feel overwhelmed. This newsletter dives into the importance of mental health research, featuring insights from psychology experts and practical tips for maintaining mental well-being. Learn how to recognize signs of stress and discover strategies to manage it effectively.',
+        type: 'newsletter',
+        externalLink: './events/newsletters/feb-newsletter.pdf'
+        }
 };
