@@ -158,7 +158,7 @@ const eventList = {
         externalLink: 'https://www.instagram.com/p/DFMbBH2M-BO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==' // Update with the correct link if available
     },
     event19: {
-        date: '2022-10-02',
+        date: '2025-02-28',
         img: './events/newsletters/feb-newsletter-img.jpg',
         title: 'Mental Health Research Represented by the Faces of Psychology',
         description: 'Sometimes, stepping away is perfectly fine! Take a break from social media if you feel overwhelmed. This newsletter dives into the importance of mental health research, featuring insights from psychology experts and practical tips for maintaining mental well-being. Learn how to recognize signs of stress and discover strategies to manage it effectively.',
