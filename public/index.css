@@ -522,7 +522,11 @@ h2 {
     font-size: 18px;
     font-weight: bold;
 }
-
+.active-minds-inc {
+    color: #3498db;
+    font-weight: bold;
+    font-style: italic;
+}
 
 
 

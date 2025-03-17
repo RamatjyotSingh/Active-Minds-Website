@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     const navbarContainer = document.querySelector('.navbar-container');
-    navbarContainer.innerHTML = `
+    navbarContainer.innerHTML = /*html*/`
+    
         <div class="navbar">
             <div class="navbar__logo">
-                <img src="club Assets/activeMindLogoOutlined.png" alt="logo"> 
+
+                <a href="index.html"><img src="club Assets/activeMindLogoOutlined.png" alt="logo"> </a>
             </div>
             <div class="menu-container">
                 <div id="menu-bar">
