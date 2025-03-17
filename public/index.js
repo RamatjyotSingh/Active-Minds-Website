@@ -271,25 +271,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger-menu');
     const menuItems = document.querySelectorAll('.menu-items li');
 
-    hamburger.addEventListener('click', function() {
-        navMenu.classList.toggle('active');
-        
-        if (navMenu.classList.contains('active')) {
-            menuItems.forEach((item, index) => {
-                setTimeout(() => {
-                    item.style.transitionDelay = `${index * 0.1}s`;
-                    item.style.opacity = '1';
-                    item.style.transform = 'translateX(0)';
-                }, 300);
-            });
-        } else {
-            menuItems.forEach((item) => {
-                item.style.transitionDelay = '0s';
-                item.style.opacity = '0';
-                item.style.transform = 'translateX(-20px)';
-            });
-        }
-    });
+
 
     // Close menu when clicking outside
     document.addEventListener('click', function(event) {

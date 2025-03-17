@@ -3,10 +3,11 @@ document.addEventListener('DOMContentLoaded', () => {
     navbarContainer.innerHTML = /*html*/`
     
         <div class="navbar">
-            <div class="navbar__logo">
-
-                <a href="index.html"><img src="club Assets/activeMindLogoOutlined.png" alt="logo"> </a>
-            </div>
+            <a href="index.html">
+                <div class="navbar__logo">
+                    <img src="club Assets/activeMindLogoOutlined.png" alt="logo">
+                </div>
+            </a>
             <div class="menu-container">
                 <div id="menu-bar">
                     <div id="bar1" class="bar"></div>
