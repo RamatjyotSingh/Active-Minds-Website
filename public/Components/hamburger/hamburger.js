@@ -12,7 +12,7 @@ document.querySelector(".navbar-container").innerHTML = `<div class="navbar">
                             <li class="navbar__menu-item"><a href="#">Home</a></li>
                             <li class="navbar__menu-item"><a href="events.html">Events</a></li>
                             <li class="navbar__menu-item"><a href="../resources/index.html">Resources</a></li>
-                            <li class="navbar__menu-item"><a href="../aboutus/Teams.html">Team</a></li>
+                            <li class="navbar__menu-item"><a href="../aboutus/teams.html">Team</a></li>
                             <li class="navbar__menu-item"><a href="#">Contact</a></li>
                         
                         </ul>
