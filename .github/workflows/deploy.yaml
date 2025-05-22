@@ -38,7 +38,7 @@ jobs:
         username: ubuntu
         key: ${{ secrets.ACTIVE_MINDS_EC2_PRIVATE_KEY }}
         script: |
-          docker pull ${{ secrets.DOCKER_USERNAME }}active-minds-website
+          docker pull ${{ secrets.DOCKER_USERNAME }}/active-minds-website
           docker stop website || true
           docker rm website || true
           docker run -d --name website -p 80:80 ${{ secrets.DOCKER_USERNAME }}/active-minds-website
