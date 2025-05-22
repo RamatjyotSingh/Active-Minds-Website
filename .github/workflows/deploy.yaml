@@ -27,8 +27,8 @@ jobs:
     # Step 3: Build and push Docker image
     - name: Build and push Docker image
       run: |
-        docker build -t ramatjyotsingh/active-minds-website .
-        docker push  ramatjyotsingh/active-minds-website
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/active-minds-website .
+        docker push  ${{ secrets.DOCKER_USERNAME }}/active-minds-website
 
     # Step 4: SSH into EC2 and deploy
     - name: Deploy to EC2
@@ -38,7 +38,7 @@ jobs:
         username: ubuntu
         key: ${{ secrets.ACTIVE_MINDS_EC2_PRIVATE_KEY }}
         script: |
-          docker pull ramatjyotsingh/active-minds-website
+          docker pull ${{ secrets.DOCKER_USERNAME }}active-minds-website
           docker stop website || true
           docker rm website || true
-          docker run -d --name website -p 80:80 ramatjyotsingh/active-minds-website
+          docker run -d --name website -p 80:80 ${{ secrets.DOCKER_USERNAME }}/active-minds-website
