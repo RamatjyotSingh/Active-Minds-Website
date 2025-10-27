@@ -1,4 +1,3 @@
-```markdown
 # Active Minds Website
 
 > NOTE: This repository has moved to the Active Minds UManitoba organization. The active development and canonical source is now at: https://github.com/Active-Minds-UManitoba/active-minds-umanitoba
@@ -70,4 +69,5 @@ Contributions are what make the open-source community such an amazing place to l
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-```
+
+
