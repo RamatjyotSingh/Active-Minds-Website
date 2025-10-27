@@ -28,7 +28,7 @@ To get a local copy up and running, follow these steps:
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/Krish-Bhalala/Active-Minds-Website.git
+   git clone https://github.com/ramatjyotsingh/Active-Minds-Website.git
    ```
 
 2. Navigate to the project directory:
@@ -66,3 +66,4 @@ Contributions are what make the open-source community such an amazing place to l
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
+
