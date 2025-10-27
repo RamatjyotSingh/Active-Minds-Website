@@ -1,4 +1,8 @@
+```markdown
 # Active Minds Website
+
+> NOTE: This repository has moved to the Active Minds UManitoba organization. The active development and canonical source is now at: https://github.com/Active-Minds-UManitoba/active-minds-umanitoba
+> GitHub org: @Active-Minds-UManitoba
 
 Official website of Active Minds at the University of Manitoba.
 The site is Live at [activeminds-umanitoba.org](https://activeminds-umanitoba.org/)
@@ -12,7 +16,7 @@ The site is Live at [activeminds-umanitoba.org](https://activeminds-umanitoba.or
 
 ## Introduction
 
-Active Minds is a student-led organization dedicated to promoting mental health awareness and education at the University of Manitoba. This website serves as a platform to share resources, events, and information about our initiatives.
+Active Minds is a student-led organization dedicated to promoting mental health awareness and education at the University of Manitoba. This website serves as a platform to share resources, events, and[...]
 
 ## Features
 
@@ -25,16 +29,16 @@ Active Minds is a student-led organization dedicated to promoting mental health 
 
 To get a local copy up and running, follow these steps:
 
-1. Clone the repository:
+1. Clone the repository (note: this repository has moved — see the note above):
 
    ```sh
-   git clone https://github.com/ramatjyotsingh/Active-Minds-Website.git
+   git clone https://github.com/Active-Minds-UManitoba/active-minds-umanitoba.git
    ```
 
 2. Navigate to the project directory:
 
    ```sh
-   cd Active-Minds-Website
+   cd active-minds-umanitoba
    ```
 
 3. Install dependencies:
@@ -66,4 +70,4 @@ Contributions are what make the open-source community such an amazing place to l
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
+```
